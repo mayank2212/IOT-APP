@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.aurasphere.bluepair">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/water"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.custom.CustomSequanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.BluetoothActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CustomDrainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CustomHeaterTemp"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CustomHeaterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ShoulderAndWaterFallActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CascadeSetOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CustomHydroMassage"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HydroMessage"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DefaultMessageActivty"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CustomMassageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CustomActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".activity.DefalutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HomePageActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.Launcher">
+
+        </activity>
+        <activity android:name=".operation.OperationActivity" />
+    </application>
+
+</manifest>

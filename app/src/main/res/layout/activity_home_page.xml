@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/home"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context=".activity.HomePageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--        <FrameLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            >-->
+
+        <!--            <it.beppi.knoblibrary.Knob-->
+        <!--                android:layout_width="300dp"-->
+        <!--                android:layout_height="300dp"-->
+        <!--                android:id="@+id/knob"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                app:kNumberOfStates="200"-->
+        <!--                app:kBorderWidth="0dp"-->
+        <!--                app:kKnobDrawable="@drawable/go"-->
+        <!--                app:kStateMarkersColor="#000"-->
+        <!--                app:kIndicatorColor="#000"-->
+        <!--                app:kSelectedStateMarkerColor="@color/teal_700"-->
+        <!--                app:kFreeRotation="false"-->
+        <!--                app:kAnimation="false"-->
+        <!--                />-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/home_page_go_image_view"-->
+        <!--                android:src="@drawable/button"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"/>-->
+
+        <!--            <me.tankery.lib.circularseekbar.CircularSeekBar-->
+        <!--                android:id="@+id/seek_bar"-->
+        <!--                android:layout_width="190dp"-->
+        <!--                android:layout_height="190dp"-->
+        <!--                app:cs_negative_enabled="true"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                app:cs_circle_style="round"-->
+        <!--                android:visibility="gone"-->
+        <!--                app:cs_circle_stroke_width="10dp"-->
+        <!--                app:cs_pointer_stroke_width="10dp"-->
+        <!--                app:cs_pointer_angle="10"/>-->
+
+        <!--        </FrameLayout>-->
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageButton
+                android:id="@+id/imgButton"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/button"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="205dp"
+                android:layout_height="205dp"
+                android:elevation="10dp"
+                android:rotation="90"
+                app:layout_constraintBottom_toBottomOf="@+id/imgButton"
+                app:layout_constraintEnd_toEndOf="@+id/imgButton"
+                app:layout_constraintStart_toStartOf="@+id/imgButton"
+                app:layout_constraintTop_toTopOf="@+id/imgButton">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-29dp"
+                    android:background="@drawable/ic_baseline_arrow_left_24"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <me.tankery.lib.circularseekbar.CircularSeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:rotation="130"
+                app:cs_circle_progress_color="#18000000"
+                app:cs_circle_stroke_width="10dp"
+                app:cs_circle_style="square"
+                app:cs_disable_pointer="false"
+                app:cs_disable_progress_glow="true"
+                app:cs_hide_progress_when_empty="true"
+                app:cs_lock_enabled="true"
+                app:cs_maintain_equal_circle="false"
+                app:cs_max="260"
+                app:cs_move_outside_circle="false"
+                app:cs_negative_enabled="true"
+                app:cs_pointer_color="@color/teal_700"
+                app:cs_pointer_halo_border_width="20dp"
+                app:cs_pointer_halo_width="0dp"
+                app:cs_pointer_stroke_width="10dp"
+                app:cs_progress="129"
+                app:cs_start_angle="10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/default_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Default"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/home_page_on_off"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="ON"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/custom_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Custom"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/water" />
+
+            <TextView
+                android:id="@+id/blue_tooth_connect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Connect"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<android.support.constraint.ConstraintLayout
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<android.support.constraint.ConstraintLayout
+
+        android:id="@+id/constraintLayout"
+        android:layout_width="205dp"
+        android:layout_height="205dp"
+        android:rotation="-40"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/button">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-28dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/ic_baseline_arrow_left_24"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="-2dp"
+            android:background="@drawable/ic_baseline_square_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+
+
+    <ImageView
+        android:layout_width="205dp"
+        android:layout_height="205dp"
+        android:background="@drawable/outside_border"
+        android:elevation="0dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+    <!--    <View-->
+    <!--        android:layout_width="5dp"-->
+    <!--        android:layout_height="5dp"-->
+    <!--        android:background="@color/white"-->
+    <!--        android:layout_marginBottom="8dp"-->
+    <!--        android:layout_marginStart="15dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/button"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/view2"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/view" />-->
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="205dp"
+        android:layout_height="28dp"
+        android:background="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="50dp"
+        android:layout_height="11dp"
+        android:background="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout" />
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="11dp"
+        android:background="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout" />
+</android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

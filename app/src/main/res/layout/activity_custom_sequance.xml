@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1671B8"
+    tools:context=".activity.custom.CustomSequanceActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/custom_sequence_back_btn"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:text="Set Order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/custom_set_order_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/custom_sequance_start"
+            android:layout_marginTop="0dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="bottom|center"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:text="START"
+            android:textColor="#F18015" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

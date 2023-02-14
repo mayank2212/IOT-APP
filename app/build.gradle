@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdk 30
+    buildToolsVersion '33.0.0'
+    defaultConfig {
+        applicationId "co.aurasphere.bluepair"
+        minSdkVersion 19
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    def buildSecretPropertiesFile = rootProject.file('blue-pair-secret.properties')
+    def buildSecretProperties = new Properties()
+//    buildSecretProperties.load(new FileInputStream(buildSecretPropertiesFile))
+
+    signingConfigs {
+        release {
+
+
+            // Optional, specify signing versions used
+
+            task wrapper(type: Wrapper){
+                gradleVersion = '7.2'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+
+        }
+        debug {
+            debuggable true
+        }
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-all:1.10.19'
+    testImplementation 'org.powermock:powermock-api-mockito:1.6.6'
+    testImplementation 'org.powermock:powermock-module-junit4:1.6.6'
+    implementation 'com.github.Jasonchenlijian:FastBle:2.4.0'
+    implementation 'com.daasuu:animateHorizontalProgressBar:0.2.4'
+    implementation 'me.tankery.lib:circularSeekBar:1.3.2'
+    implementation 'com.github.BeppiMenozzi:Knob:1.9.0'
+    implementation 'com.github.anrwatchdog:anrwatchdog:1.4.0'
+}
