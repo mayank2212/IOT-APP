@@ -1,6 +1,7 @@
 package co.aurasphere.bluepair.activity;
 
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import co.aurasphere.bluepair.Modes;
 import co.aurasphere.bluepair.R;
 import co.aurasphere.bluepair.operation.BluetoothOperation;
 
@@ -17,6 +19,7 @@ public class CustomHydroMassage extends AppCompatActivity {
     private ImageView imgBackBtn;
     private SeekBar seekBarHydroMassage,seekBarAirMassage;
     private TextView tvHydroMassage,tvAirMassage;
+    private TextView jet1TimerText,jet2TimerText,jet3TimerText,jet4TimerText;
     private Button start;
     private boolean isOn = false;
     private boolean isAlreadyOn;
@@ -37,8 +40,8 @@ public class CustomHydroMassage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_hydro_massage);
         getSupportActionBar().hide();
-        init();
         isAlreadyOn=getIntent().getBooleanExtra("isOn",false);
+        init();
         if(isAlreadyOn){
             start.setText("STOP");
             isOn=true;
@@ -163,5 +166,9 @@ public class CustomHydroMassage extends AppCompatActivity {
                 Log.d("TAG", ":custom hydro massage  :Air "+String.format("%03d", mins2));
             }
         });
+
+
     }
+
+
 }

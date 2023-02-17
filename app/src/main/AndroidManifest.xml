@@ -49,12 +49,12 @@
         <activity
             android:name=".activity.CustomActivity"
             android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".activity.DefalutActivity"
@@ -67,6 +67,7 @@
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.Launcher">
+
 
         </activity>
         <activity android:name=".operation.OperationActivity" />

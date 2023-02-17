@@ -1,6 +1,10 @@
 package co.aurasphere.bluepair.activity;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,9 +12,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.daasuu.ahp.AnimateHorizontalProgressBar;
 
+import co.aurasphere.bluepair.Modes;
 import co.aurasphere.bluepair.R;
 import co.aurasphere.bluepair.operation.BluetoothOperation;
 
@@ -18,7 +24,10 @@ public class HydroMessage extends AppCompatActivity {
 
     ImageView backBtn;
     private SeekBar massage2,massage3,massage4;
-    int mins1=5,mins2=5,mins3=5,mins4=5;
+    int mins1=Integer.parseInt(Modes.getModes().getHydroJet1Time());
+    int mins2=Integer.parseInt(Modes.getModes().getHydroJet2Time());
+    int mins3=Integer.parseInt(Modes.getModes().getHydroJet3Time());
+    int mins4= Integer.parseInt(Modes.getModes().getHydroJet4Time());
     TextView start;
     private boolean isOn = false;
     SeekBar massage1;
@@ -27,6 +36,64 @@ public class HydroMessage extends AppCompatActivity {
     TextView massage1txt,massage2txt,massage3txt,massage4txt;
     private Boolean isAlreadyOn=false;
     Intent resultIntent=new Intent();
+
+    BroadcastReceiver hydroSequenceBroadcast=new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            long currentMillis;
+            String[] extractedJet1Time = Modes.getModes().getHydroJet1Time().split(" ");
+            String[] extractedJet2Time = Modes.getModes().getHydroJet2Time().split(" ");
+            String[] extractedJet3Time = Modes.getModes().getHydroJet3Time().split(" ");
+            String[] extractedJet4Time = Modes.getModes().getHydroJet4Time().split(" ");
+
+            Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
+            Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
+            Long jet3Sec= Long.valueOf((Integer.parseInt(extractedJet3Time[0])));
+            Long jet4Sec= Long.valueOf((Integer.parseInt(extractedJet4Time[0])));
+            if(intent.getAction().equals(CustomActivity.HYDRO_SEQUENCE_BROADCAST_KEY)) {
+                currentMillis=Long.parseLong(extractedJet1Time[0]);
+                massage1txt.setText(((currentMillis))+"");
+                massage1.setProgress((int) (currentMillis));
+
+                currentMillis=Long.parseLong(extractedJet2Time[0]);
+                massage2txt.setText(((currentMillis))+"");
+                massage2.setProgress((int) (currentMillis));
+
+                currentMillis=Long.parseLong(extractedJet3Time[0]);
+                massage3txt.setText(((currentMillis))+"");
+                massage3.setProgress((int) (currentMillis));
+
+                currentMillis=Long.parseLong(extractedJet4Time[0]);
+                massage4txt.setText(((currentMillis))+"");
+                massage4.setProgress((int) (currentMillis));
+
+                if(jet1Sec==0 && jet2Sec==0 && jet3Sec==0 && jet4Sec==0){
+                    BluetoothOperation.sendCommand("#$HYDROSEQOFF$#");
+                    start.setText("START");
+                    isOn=false;
+                    isAlreadyOn=false;
+                    Intent broadcastIntent=new Intent(CustomActivity.HYDRO_SEQUENCE_START_STOP);
+                    broadcastIntent.putExtra("isOn",isOn);
+                    sendBroadcast(broadcastIntent);
+                    resultIntent.putExtra("isOn",isOn);
+                }
+
+
+            }
+        }
+    };
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        registerReceiver(hydroSequenceBroadcast,new IntentFilter(CustomActivity.HYDRO_SEQUENCE_BROADCAST_KEY));
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(hydroSequenceBroadcast);
+    }
 
     @Override
     protected void onStop() {
@@ -39,7 +106,7 @@ public class HydroMessage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hydro_message);
         getSupportActionBar().hide();
-        initialiseViews();
+        isAlreadyOn=getIntent().getBooleanExtra("isOn",false);
         massage1 = findViewById(R.id.animate_progress_bar);
         massage2 = findViewById(R.id.animate_progress_bar2);
         massage3 = findViewById(R.id.animate_progress_bar3);
@@ -49,8 +116,10 @@ public class HydroMessage extends AppCompatActivity {
         massage3txt = findViewById(R.id.massage3txt);
         massage4txt = findViewById(R.id.massage4txt);
         start = findViewById(R.id.start);
+        initialiseViews();
 
-        isAlreadyOn=getIntent().getBooleanExtra("isOn",false);
+//        Toast.makeText(this, ""+isAlreadyOn, Toast.LENGTH_SHORT).show();
+
         if(isAlreadyOn){
             start.setText("STOP");
             isOn=true;
@@ -211,6 +280,7 @@ public class HydroMessage extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent broadcastIntent=new Intent(CustomActivity.HYDRO_SEQUENCE_START_STOP);
                 if (isOn){
                     BluetoothOperation.sendCommand("#$HYDROSEQOFF$#");
                     isOn = false;
@@ -218,6 +288,8 @@ public class HydroMessage extends AppCompatActivity {
 
                     resultIntent.putExtra("isOn",isOn);
                     setResult(0,resultIntent);
+                    broadcastIntent.putExtra("isOn",isOn);
+                    sendBroadcast(broadcastIntent);
                 }
                 else{
                     BluetoothOperation.sendCommand(getCommand());
@@ -225,6 +297,13 @@ public class HydroMessage extends AppCompatActivity {
                     start.setText("STOP");
                     resultIntent.putExtra("isOn",isOn);
                     setResult(0,resultIntent);
+                    Log.e("TAG", "onClick: start is clicked mins1 : "+mins1+" mins2 : "+mins2+" mins3 "+ mins3+" mins4 : "+mins4);
+                    Modes.getModes().setHydroJet1Time(String.valueOf(mins1));
+                    Modes.getModes().setHydroJet2Time(String.valueOf(mins2));
+                    Modes.getModes().setHydroJet3Time(String.valueOf(mins3));
+                    Modes.getModes().setHydroJet4Time(String.valueOf(mins4));
+                    broadcastIntent.putExtra("isOn",isOn);
+                    sendBroadcast(broadcastIntent);
                 }
 
             }
@@ -258,6 +337,10 @@ public class HydroMessage extends AppCompatActivity {
 
         return "#$HYDROSEQH1"+String.format("%03d", mins1)+"H2"+String.format("%03d", mins2)+"H3"+String.format("%03d", mins3)+"H4"+String.format("%03d", mins4)+"$#";
     }
+
+
+
+
 
 
 }

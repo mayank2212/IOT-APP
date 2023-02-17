@@ -32,6 +32,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     public static final String HEATER_CUSTOM_MASSAGE_START_STOP = "heater_custom_massage_start_stop";
     public static final String DRAIN_CUSTOM_MASSAGE_START_STOP = "drain_custom_massage_start_stop";
     public static final String CLEANING_CUSTOM_MASSAGE_START_STOP = "cleaning_custom_massage_start_stop";
+    public static final String HYDRO_SEQUENCE_START_STOP = "HYDRO_SEQUENCE_START_STOP";
 
     public static final String HYDRO_CUSTOM_MASSAGE_BROADCAST_KEY = "HYDRO_CUSTOM_MASSAGE_BROADCAST_KEY";
     public static final String AIR_CUSTOM_MASSAGE_BROADCAST_KEY = "AIR_CUSTOM_MASSAGE_BROADCAST_KEY";
@@ -42,6 +43,20 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     public static final String DRAIN_CUSTOM_MASSAGE_BROADCAST_KEY = "DRAIN_CUSTOM_MASSAGE_BROADCAST_KEY";
     public static final String CLEANING_DRAIN_CUSTOM_MASSAGE_BROADCAST_KEY = "CLEANING_CUSTOM_MASSAGE_BROADCAST_KEY";
     public static final String CLEANING_FALL_CUSTOM_MASSAGE_BROADCAST_KEY = "CLEANING_CUSTOM_MASSAGE_BROADCAST_KEY";
+    public static final String HYDRO_SEQUENCE_BROADCAST_KEY = "HYDRO_SEQUENCE_BROADCAST_KEY";
+
+    BroadcastReceiver hydroSequenceStartStopReciever=new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if(intent.getAction()==HYDRO_SEQUENCE_START_STOP) {
+                if(intent.getBooleanExtra("isOn", false)){
+                    turnOnHydroSequenceTimers();
+                }else{
+                    stopHydroSequenceTimers();
+                }
+            }
+        }
+    };
     BroadcastReceiver startStopCustomMassageReceiver=new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -128,6 +143,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     ArrayList<CountDownTimer> countDownTimers= new ArrayList<>(10);
     ArrayList<Boolean> isAlreadyOn= new ArrayList<>(9);
     ArrayList<String> timings= new ArrayList<>(10);
+    CountDownTimer jet1Timer,jet2Timer,jet3Timer,jet4Timer;
 
 
 
@@ -165,6 +181,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         registerReceiver(heaterBroadcastStartStop,new IntentFilter(HEATER_CUSTOM_MASSAGE_START_STOP));
         registerReceiver(drainBroadcastStartStop,new IntentFilter(DRAIN_CUSTOM_MASSAGE_START_STOP));
         registerReceiver(cleaningBroadcastStartStop,new IntentFilter(CLEANING_CUSTOM_MASSAGE_START_STOP));
+        registerReceiver(hydroSequenceStartStopReciever,new IntentFilter(HYDRO_SEQUENCE_START_STOP));
     }
 
 
@@ -1219,6 +1236,103 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
 //        Integer itemPos
 //    }
 
+
+    private void turnOnHydroSequenceTimers(){
+
+        String[] extractedJet1Time = Modes.getModes().getHydroJet1Time().split(" ");
+        String[] extractedJet2Time = Modes.getModes().getHydroJet2Time().split(" ");
+        String[] extractedJet3Time = Modes.getModes().getHydroJet3Time().split(" ");
+        String[] extractedJet4Time = Modes.getModes().getHydroJet4Time().split(" ");
+//        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
+//        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
+        Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
+        Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
+        Long jet3Sec= Long.valueOf((Integer.parseInt(extractedJet3Time[0])));
+        Long jet4Sec= Long.valueOf((Integer.parseInt(extractedJet4Time[0])));
+        jet1Timer=new CountDownTimer(jet1Sec*1000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Modes.getModes().setHydroJet1Time(String.valueOf(millisUntilFinished/1000));
+                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(hydroSequenceBroadcastIntent);
+                Log.e("TAG", "onTick: jet1 "+millisUntilFinished/1000);
+            }
+
+            @Override
+            public void onFinish() {
+                Modes.getModes().setHydroJet1Time("0");
+                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(hydroSequenceBroadcastIntent);
+            }
+        };
+        jet1Timer.start();
+
+        jet2Timer=new CountDownTimer(jet2Sec*1000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Modes.getModes().setHydroJet2Time(String.valueOf(millisUntilFinished/1000));
+                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(hydroSequenceBroadcastIntent);
+                Log.e("TAG", "onTick: jet2 "+millisUntilFinished/1000);
+            }
+
+            @Override
+            public void onFinish() {
+                Modes.getModes().setHydroJet2Time("0");
+                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(hydroSequenceBroadcastIntent);
+            }
+        };
+        jet2Timer.start();
+
+        jet3Timer=new CountDownTimer(jet3Sec*1000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Modes.getModes().setHydroJet3Time(String.valueOf(millisUntilFinished/1000));
+                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(hydroSequenceBroadcastIntent);
+                Log.e("TAG", "onTick: jet3 "+millisUntilFinished/1000);
+            }
+
+            @Override
+            public void onFinish() {
+                Modes.getModes().setHydroJet3Time("0");
+                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(hydroSequenceBroadcastIntent);
+            }
+        };
+        jet3Timer.start();
+
+        jet4Timer=new CountDownTimer(jet4Sec*1000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Modes.getModes().setHydroJet4Time(String.valueOf(millisUntilFinished/1000));
+                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(hydroSequenceBroadcastIntent);
+                Log.e("TAG", "onTick: jet4 "+millisUntilFinished/1000);
+            }
+
+            @Override
+            public void onFinish() {
+                Modes.getModes().setHydroJet4Time("0");
+                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(hydroSequenceBroadcastIntent);
+            }
+        };
+        jet4Timer.start();
+        isOnOff.set(0, true );
+        hydroSequenceOnOff.setText("ON");
+    }
+    private void stopHydroSequenceTimers(){
+        if(jet1Timer!=null && jet2Timer!=null && jet3Timer!=null && jet4Timer!=null) {
+            jet1Timer.cancel();
+            jet2Timer.cancel();
+            jet3Timer.cancel();
+            jet4Timer.cancel();
+            isOnOff.set(0, false );
+            hydroSequenceOnOff.setText("OFF");
+        }
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -1226,5 +1340,6 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         unregisterReceiver(heaterBroadcastStartStop);
         unregisterReceiver(drainBroadcastStartStop);
         unregisterReceiver(cleaningBroadcastStartStop);
+        unregisterReceiver(hydroSequenceStartStopReciever);
     }
 }

@@ -174,7 +174,7 @@ public class CustomMassageActivity extends AppCompatActivity {
 //        resultIntent.putExtra("isOn",isOn);
 //        setResult(3,resultIntent);
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(), "the exception is "+e, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "the exception is custom Massage"+e, Toast.LENGTH_LONG).show();
         }
 
     }

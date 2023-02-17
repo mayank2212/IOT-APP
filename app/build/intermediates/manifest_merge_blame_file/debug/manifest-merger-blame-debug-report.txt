@@ -24,7 +24,7 @@
 14-->[com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:14:22-76
 15
 16    <application
-16-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:9:5-73:19
+16-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:9:5-74:19
 17        android:name="co.aurasphere.bluepair.MyApplication"
 17-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:10:9-38
 18        android:allowBackup="true"
@@ -114,14 +114,14 @@
 61            android:exported="true" >
 61-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:51:13-36
 62            <intent-filter>
-62-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:52:13-56:29
+62-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:53:13-57:29
 63                <action android:name="android.intent.action.MAIN" />
-63-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:53:17-69
-63-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:53:25-66
+63-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:54:17-69
+63-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:54:25-66
 64
 65                <category android:name="android.intent.category.LAUNCHER" />
-65-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:55:17-77
-65-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:55:27-74
+65-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:56:17-77
+65-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:56:27-74
 66            </intent-filter>
 67        </activity>
 68        <activity
@@ -137,7 +137,7 @@
 73            android:exported="false" />
 73-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:64:13-37
 74        <activity
-74-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:65:9-71:20
+74-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:65:9-72:20
 75            android:name="co.aurasphere.bluepair.activity.HomePageActivity"
 75-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:66:13-54
 76            android:configChanges="orientation|screenSize"
@@ -148,8 +148,8 @@
 78-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:69:13-53
 79        </activity>
 80        <activity android:name="co.aurasphere.bluepair.operation.OperationActivity" />
-80-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:72:9-65
-80-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:72:19-62
+80-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:73:9-65
+80-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:73:19-62
 81    </application>
 82
 83</manifest>

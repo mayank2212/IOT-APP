@@ -23,6 +23,10 @@ public class Modes {
     private String CleaningTime="600000 Min";
     private String cleanFill ="2";
     private String cleanDrain ="2";
+    private String hydroJet1 ="5";
+    private String hydroJet2 ="5";
+    private String hydroJet3 ="5";
+    private String hydroJet4 ="5";
 
 //    public String getHeaterTime() {
 //        return heaterTime;
@@ -176,6 +180,18 @@ public class Modes {
 
     public void setCleanDrainTime(String drainTime) {cleanDrain = drainTime;}
     public String getCleanDrainTime() {return cleanDrain;}
+
+    public void setHydroJet1Time(String jet1Time){hydroJet1=jet1Time;}
+    public String getHydroJet1Time() {return hydroJet1;}
+
+    public void setHydroJet2Time(String jet2Time){hydroJet2=jet2Time;}
+    public String getHydroJet2Time() {return hydroJet2;}
+
+    public void setHydroJet3Time(String jet3Time){hydroJet3=jet3Time;}
+    public String getHydroJet3Time() {return hydroJet3;}
+
+    public void setHydroJet4Time(String jet4Time){hydroJet4=jet4Time;}
+    public String getHydroJet4Time() {return hydroJet4;}
 
 
     public String convertToMillis(String time){
