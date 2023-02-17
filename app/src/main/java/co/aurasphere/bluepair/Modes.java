@@ -27,6 +27,8 @@ public class Modes {
     private String hydroJet2 ="5";
     private String hydroJet3 ="5";
     private String hydroJet4 ="5";
+    private String customSequenceHydro ="5";
+    private String customSequenceAir ="5";
 
 //    public String getHeaterTime() {
 //        return heaterTime;
@@ -192,6 +194,12 @@ public class Modes {
 
     public void setHydroJet4Time(String jet4Time){hydroJet4=jet4Time;}
     public String getHydroJet4Time() {return hydroJet4;}
+
+    public void setCustomSequenceHydro(String jet4Time){customSequenceHydro=jet4Time;}
+    public String getCustomSequenceHydro() {return customSequenceHydro;}
+
+    public void setCustomSequenceAir(String jet4Time){customSequenceAir=jet4Time;}
+    public String getCustomSequenceAir() {return customSequenceAir;}
 
 
     public String convertToMillis(String time){
