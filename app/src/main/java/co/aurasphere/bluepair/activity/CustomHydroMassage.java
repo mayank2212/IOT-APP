@@ -52,7 +52,7 @@ public class CustomHydroMassage extends AppCompatActivity {
                 seekBarAirMassage.setProgress((int) (currentMillis));
 
                 if(jet1Sec==0 && jet2Sec==0 ){
-                    BluetoothOperation.sendCommand("#$HYDROSEQOFF$#");
+                    BluetoothOperation.sendCommand("#$TOGHYDROAIROFF$#");
                     start.setText("START");
                     isOn=false;
                     isAlreadyOn=false;

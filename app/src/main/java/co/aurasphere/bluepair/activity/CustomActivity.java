@@ -34,6 +34,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     public static final String CLEANING_CUSTOM_MASSAGE_START_STOP = "cleaning_custom_massage_start_stop";
     public static final String HYDRO_SEQUENCE_START_STOP = "HYDRO_SEQUENCE_START_STOP";
     public static final String CUSTOM_HYDRO_SEQUENCE_START_STOP = "CUSTOM_HYDRO_SEQUENCE_START_STOP";
+    public static final String CASCADE_WATERFALL_SEQUENCE_START_STOP = "CASCADE_WATERFALL_SEQUENCE_START_STOP";
 
     public static final String HYDRO_CUSTOM_MASSAGE_BROADCAST_KEY = "HYDRO_CUSTOM_MASSAGE_BROADCAST_KEY";
     public static final String AIR_CUSTOM_MASSAGE_BROADCAST_KEY = "AIR_CUSTOM_MASSAGE_BROADCAST_KEY";
@@ -46,6 +47,23 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     public static final String CLEANING_FALL_CUSTOM_MASSAGE_BROADCAST_KEY = "CLEANING_CUSTOM_MASSAGE_BROADCAST_KEY";
     public static final String HYDRO_SEQUENCE_BROADCAST_KEY = "HYDRO_SEQUENCE_BROADCAST_KEY";
     public static final String CUSTOM_HYDRO_SEQUENCE_BROADCAST_KEY = "CUSTOM_HYDRO_SEQUENCE_BROADCAST_KEY";
+    public static final String CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY = "CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY";
+
+    BroadcastReceiver cascadeWaterfallSequenceStartStopReceiver=new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if(intent.getAction()==CASCADE_WATERFALL_SEQUENCE_START_STOP) {
+                if(intent.getBooleanExtra("isOn", false)){
+                    turnOnCascadeWaterfallTimers();
+                }else{
+                    stopCascadeWaterfallSequenceTimers();
+                }
+            }
+        }
+    };
+
+
+
 
     BroadcastReceiver hydroSequenceStartStopReciever=new BroadcastReceiver() {
         @Override
@@ -159,6 +177,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     ArrayList<String> timings= new ArrayList<>(10);
     CountDownTimer jet1Timer,jet2Timer,jet3Timer,jet4Timer;
     CountDownTimer customHydroSequence,customAirSequence;
+    CountDownTimer cascadeWaterfallJet1Sequence,cascadeWaterfallJet2Sequence;
 
 
 
@@ -199,6 +218,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         registerReceiver(cleaningBroadcastStartStop,new IntentFilter(CLEANING_CUSTOM_MASSAGE_START_STOP));
         registerReceiver(hydroSequenceStartStopReciever,new IntentFilter(HYDRO_SEQUENCE_START_STOP));
         registerReceiver(customHydroSequenceStartStopReceiver,new IntentFilter(CUSTOM_HYDRO_SEQUENCE_START_STOP));
+        registerReceiver(cascadeWaterfallSequenceStartStopReceiver,new IntentFilter(CASCADE_WATERFALL_SEQUENCE_START_STOP));
     }
 
 
@@ -1448,6 +1468,78 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
             airMassageToggleOnOff.setText("OFF");
         }
     }
+
+    private void turnOnCascadeWaterfallTimers() {
+        String[] extractedJet1Time = Modes.getModes().getCascadeWaterfallJet1().split(" ");
+        String[] extractedJet2Time = Modes.getModes().getCascadeWaterfallJet2().split(" ");
+
+//        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
+//        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
+        Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
+        Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
+
+        final long[] hydroSeconds = new long[1];
+        final long[] airSeconds = new long[1];
+
+        cascadeWaterfallJet1Sequence=new CountDownTimer(jet1Sec*1000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Modes.getModes().setCascadeWaterfallJet1(String.valueOf(millisUntilFinished/1000));
+                Intent cascadeWaterfallSequenceBroadcastIntent=new Intent(CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(cascadeWaterfallSequenceBroadcastIntent);
+                hydroSeconds[0] =millisUntilFinished/1000;
+
+            }
+
+            @Override
+            public void onFinish() {
+                Modes.getModes().setCascadeWaterfallJet1("0");
+                Intent cascadeWaterfallSequenceBroadcastIntent=new Intent(CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(cascadeWaterfallSequenceBroadcastIntent);
+                hydroSeconds[0]=0;
+                if(hydroSeconds[0]==0 && airSeconds[0]==0){
+                    stopCascadeWaterfallSequenceTimers();
+                }
+            }
+        };
+        cascadeWaterfallJet1Sequence.start();
+
+        cascadeWaterfallJet2Sequence=new CountDownTimer(jet2Sec*1000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Modes.getModes().setCascadeWaterfallJet2(String.valueOf(millisUntilFinished/1000));
+                Intent customHydroSequenceBroadcastIntent=new Intent(CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(customHydroSequenceBroadcastIntent);
+                airSeconds[0]=millisUntilFinished/1000;
+            }
+
+            @Override
+            public void onFinish() {
+                Modes.getModes().setCascadeWaterfallJet2("0");
+                Intent customHydroSequenceBroadcastIntent=new Intent(CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(customHydroSequenceBroadcastIntent);
+                airSeconds[0]=0;
+                if(hydroSeconds[0]==0 && airSeconds[0]==0){
+                    stopCascadeWaterfallSequenceTimers();
+                }
+            }
+        };
+        cascadeWaterfallJet2Sequence.start();
+
+
+        isOnOff.set(2, true );
+        waterFallSequenceOnOff.setText("ON");
+    }
+    private void stopCascadeWaterfallSequenceTimers() {
+        if(cascadeWaterfallJet1Sequence!=null && cascadeWaterfallJet2Sequence!=null) {
+
+            cascadeWaterfallJet1Sequence.cancel();
+            cascadeWaterfallJet2Sequence.cancel();
+
+            isOnOff.set(2, false );
+            waterFallSequenceOnOff.setText("OFF");
+        }
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -1457,5 +1549,6 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         unregisterReceiver(cleaningBroadcastStartStop);
         unregisterReceiver(hydroSequenceStartStopReciever);
         unregisterReceiver(customHydroSequenceStartStopReceiver);
+        unregisterReceiver(cascadeWaterfallSequenceStartStopReceiver);
     }
 }

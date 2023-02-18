@@ -27,6 +27,9 @@ public class Modes {
     private String hydroJet2 ="5";
     private String hydroJet3 ="5";
     private String hydroJet4 ="5";
+    private String cascadeWaterfallJet1 ="5";
+    private String cascadeWaterfallJet2 ="5";
+
     private String customSequenceHydro ="5";
     private String customSequenceAir ="5";
 
@@ -200,6 +203,12 @@ public class Modes {
 
     public void setCustomSequenceAir(String jet4Time){customSequenceAir=jet4Time;}
     public String getCustomSequenceAir() {return customSequenceAir;}
+
+    public void setCascadeWaterfallJet1(String jet4Time){cascadeWaterfallJet1=jet4Time;}
+    public String getCascadeWaterfallJet1() {return cascadeWaterfallJet1;}
+
+    public void setCascadeWaterfallJet2(String jet4Time){cascadeWaterfallJet2=jet4Time;}
+    public String getCascadeWaterfallJet2() {return cascadeWaterfallJet2;}
 
 
     public String convertToMillis(String time){
