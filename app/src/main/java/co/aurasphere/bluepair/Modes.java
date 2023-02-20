@@ -33,6 +33,9 @@ public class Modes {
     private String customSequenceHydro ="5";
     private String customSequenceAir ="5";
 
+    private String neckShoulderSequence ="5";
+    private String waterShoulderSequence ="5";
+
 //    public String getHeaterTime() {
 //        return heaterTime;
 //    }
@@ -209,6 +212,12 @@ public class Modes {
 
     public void setCascadeWaterfallJet2(String jet4Time){cascadeWaterfallJet2=jet4Time;}
     public String getCascadeWaterfallJet2() {return cascadeWaterfallJet2;}
+
+    public void setNeckShoulderSequence(String jet4Time){neckShoulderSequence=jet4Time;}
+    public String getNeckShoulderSequence() {return neckShoulderSequence;}
+
+    public void setWaterShoulderSequence(String jet4Time){waterShoulderSequence=jet4Time;}
+    public String getWaterShoulderSequence() {return waterShoulderSequence;}
 
 
     public String convertToMillis(String time){

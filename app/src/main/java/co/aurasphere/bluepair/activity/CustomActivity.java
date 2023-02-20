@@ -35,6 +35,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     public static final String HYDRO_SEQUENCE_START_STOP = "HYDRO_SEQUENCE_START_STOP";
     public static final String CUSTOM_HYDRO_SEQUENCE_START_STOP = "CUSTOM_HYDRO_SEQUENCE_START_STOP";
     public static final String CASCADE_WATERFALL_SEQUENCE_START_STOP = "CASCADE_WATERFALL_SEQUENCE_START_STOP";
+    public static final String NECK_SHOULDER_WATER_SEQUENCE_START_STOP = "NECK_SHOULDER_WATER_SEQUENCE_START_STOP";
 
     public static final String HYDRO_CUSTOM_MASSAGE_BROADCAST_KEY = "HYDRO_CUSTOM_MASSAGE_BROADCAST_KEY";
     public static final String AIR_CUSTOM_MASSAGE_BROADCAST_KEY = "AIR_CUSTOM_MASSAGE_BROADCAST_KEY";
@@ -48,6 +49,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     public static final String HYDRO_SEQUENCE_BROADCAST_KEY = "HYDRO_SEQUENCE_BROADCAST_KEY";
     public static final String CUSTOM_HYDRO_SEQUENCE_BROADCAST_KEY = "CUSTOM_HYDRO_SEQUENCE_BROADCAST_KEY";
     public static final String CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY = "CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY";
+    public static final String NECK_SHOULDER_WATER_SEQUENCE_BROADCAST_KEY = "NECK_SHOULDER_WATER_SEQUENCE_BROADCAST_KEY";
 
     BroadcastReceiver cascadeWaterfallSequenceStartStopReceiver=new BroadcastReceiver() {
         @Override
@@ -57,6 +59,19 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                     turnOnCascadeWaterfallTimers();
                 }else{
                     stopCascadeWaterfallSequenceTimers();
+                }
+            }
+        }
+    };
+
+    BroadcastReceiver neckShoulderWaterSequenceStartStopReceiver=new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if(intent.getAction()==NECK_SHOULDER_WATER_SEQUENCE_START_STOP) {
+                if(intent.getBooleanExtra("isOn", false)){
+                    turnOnNeckShoulderWaterSequenceTimers();
+                }else{
+                    stopNeckShoulderWaterSequenceTimers();
                 }
             }
         }
@@ -178,6 +193,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     CountDownTimer jet1Timer,jet2Timer,jet3Timer,jet4Timer;
     CountDownTimer customHydroSequence,customAirSequence;
     CountDownTimer cascadeWaterfallJet1Sequence,cascadeWaterfallJet2Sequence;
+    CountDownTimer neckShoulderSequenceTimer,neckWaterSequenceTimer;
 
 
 
@@ -219,6 +235,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         registerReceiver(hydroSequenceStartStopReciever,new IntentFilter(HYDRO_SEQUENCE_START_STOP));
         registerReceiver(customHydroSequenceStartStopReceiver,new IntentFilter(CUSTOM_HYDRO_SEQUENCE_START_STOP));
         registerReceiver(cascadeWaterfallSequenceStartStopReceiver,new IntentFilter(CASCADE_WATERFALL_SEQUENCE_START_STOP));
+        registerReceiver(neckShoulderWaterSequenceStartStopReceiver,new IntentFilter(NECK_SHOULDER_WATER_SEQUENCE_START_STOP));
     }
 
 
@@ -697,7 +714,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                     fall.putExtra("title1","Shoulder Fall");
                     fall.putExtra("title2","Water Fall");
                     fall.putExtra("time",ozoneTimer);
-//                    fall.putExtra("key",Operations.NECK);
+                    fall.putExtra("key",Operations.NECK);
                     fall.putExtra("key1",Operations.SHOULDER.toString());
                     fall.putExtra("key2",Operations.WATER.toString());
 //                  startActivity(fall);
@@ -1540,6 +1557,78 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
             waterFallSequenceOnOff.setText("OFF");
         }
     }
+
+    private void turnOnNeckShoulderWaterSequenceTimers() {
+        String[] extractedJet1Time = Modes.getModes().getNeckShoulderSequence().split(" ");
+        String[] extractedJet2Time = Modes.getModes().getWaterShoulderSequence().split(" ");
+
+//        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
+//        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
+        Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
+        Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
+
+        final long[] hydroSeconds = new long[1];
+        final long[] airSeconds = new long[1];
+
+        neckShoulderSequenceTimer=new CountDownTimer(jet1Sec*1000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Modes.getModes().setNeckShoulderSequence(String.valueOf(millisUntilFinished/1000));
+                Intent neckWaterShoulderSequenceBroadcastIntent=new Intent(NECK_SHOULDER_WATER_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(neckWaterShoulderSequenceBroadcastIntent);
+                hydroSeconds[0] =millisUntilFinished/1000;
+
+            }
+
+            @Override
+            public void onFinish() {
+                Modes.getModes().setNeckShoulderSequence("0");
+                Intent neckWaterShoulderSequenceBroadcastIntent=new Intent(NECK_SHOULDER_WATER_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(neckWaterShoulderSequenceBroadcastIntent);
+                hydroSeconds[0]=0;
+                if(hydroSeconds[0]==0 && airSeconds[0]==0){
+                    stopNeckShoulderWaterSequenceTimers();
+                }
+            }
+        };
+        neckShoulderSequenceTimer.start();
+
+        neckWaterSequenceTimer=new CountDownTimer(jet2Sec*1000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Modes.getModes().setWaterShoulderSequence(String.valueOf(millisUntilFinished/1000));
+                Intent neckWaterShoulderSequenceBroadcastIntent=new Intent(NECK_SHOULDER_WATER_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(neckWaterShoulderSequenceBroadcastIntent);
+                airSeconds[0]=millisUntilFinished/1000;
+            }
+
+            @Override
+            public void onFinish() {
+                Modes.getModes().setWaterShoulderSequence("0");
+                Intent neckWaterShoulderSequenceBroadcastIntent=new Intent(NECK_SHOULDER_WATER_SEQUENCE_BROADCAST_KEY);
+                sendBroadcast(neckWaterShoulderSequenceBroadcastIntent);
+                airSeconds[0]=0;
+                if(hydroSeconds[0]==0 && airSeconds[0]==0){
+                    stopNeckShoulderWaterSequenceTimers();
+                }
+            }
+        };
+        neckWaterSequenceTimer.start();
+
+
+        isOnOff.set(3, true );
+        neckFallSequenceOnOff.setText("ON");
+    }
+    private void stopNeckShoulderWaterSequenceTimers() {
+        if(neckWaterSequenceTimer!=null && neckShoulderSequenceTimer!=null) {
+
+            neckWaterSequenceTimer.cancel();
+            neckShoulderSequenceTimer.cancel();
+
+            isOnOff.set(3, false );
+            neckFallSequenceOnOff.setText("OFF");
+        }
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -1550,5 +1639,6 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         unregisterReceiver(hydroSequenceStartStopReciever);
         unregisterReceiver(customHydroSequenceStartStopReceiver);
         unregisterReceiver(cascadeWaterfallSequenceStartStopReceiver);
+        unregisterReceiver(neckShoulderWaterSequenceStartStopReceiver);
     }
 }

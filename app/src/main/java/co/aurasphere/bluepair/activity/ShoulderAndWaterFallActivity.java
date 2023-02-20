@@ -43,6 +43,41 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
 
         }
     };
+    BroadcastReceiver ShoulderWaterSequenceReceiver=new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            long currentMillis;
+            String[] extractedJet1Time = Modes.getModes().getNeckShoulderSequence().split(" ");
+            String[] extractedJet2Time = Modes.getModes().getWaterShoulderSequence().split(" ");
+
+
+            Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
+            Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
+
+            if(intent.getAction().equals(CustomActivity.NECK_SHOULDER_WATER_SEQUENCE_BROADCAST_KEY)) {
+                currentMillis=Long.parseLong(extractedJet1Time[0]);
+                tvShoulderTimer.setText(((currentMillis))+"");
+                seekBarShoulder.setProgress((int) (currentMillis));
+
+                currentMillis=Long.parseLong(extractedJet2Time[0]);
+                tvSeekBarWater.setText(((currentMillis))+"");
+                seekBarWater.setProgress((int) (currentMillis));
+
+                if(jet1Sec==0 && jet2Sec==0 ){
+                    BluetoothOperation.sendCommand("#$TOGHYDROAIROFF$#");
+                    tvStart.setText("START");
+                    isOn=false;
+                    isAlreadyOn=false;
+                    Intent broadcastIntent=new Intent(CustomActivity.NECK_SHOULDER_WATER_SEQUENCE_START_STOP);
+                    broadcastIntent.putExtra("isOn",isOn);
+                    sendBroadcast(broadcastIntent);
+                    resultIntent.putExtra("isOn",isOn);
+                }
+            }
+        }
+    };
+
+
     BroadcastReceiver drainBroadcastReceiver=new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -124,6 +159,7 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
         super.onStart();
         registerReceiver(fillBroadcastTimeReceiver,new IntentFilter(CustomActivity.CLEANING_FALL_CUSTOM_MASSAGE_BROADCAST_KEY));
         registerReceiver(drainBroadcastReceiver,new IntentFilter(CustomActivity.CLEANING_DRAIN_CUSTOM_MASSAGE_BROADCAST_KEY));
+        registerReceiver(ShoulderWaterSequenceReceiver,new IntentFilter(CustomActivity.NECK_SHOULDER_WATER_SEQUENCE_BROADCAST_KEY));
     }
 
     @Override
@@ -131,6 +167,7 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
         super.onPause();
         unregisterReceiver(fillBroadcastTimeReceiver);
         unregisterReceiver(drainBroadcastReceiver);
+        unregisterReceiver(ShoulderWaterSequenceReceiver);
     }
 
     private void initialiseViews() {
@@ -232,6 +269,7 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent broadcastIntent=new Intent(CustomActivity.CLEANING_CUSTOM_MASSAGE_START_STOP);
+                Intent neckBroadcastIntent=new Intent(CustomActivity.NECK_SHOULDER_WATER_SEQUENCE_START_STOP);
                 if (isOn) {
                     isOn = false;
                     String stopCommand = getOffCommand();
@@ -243,8 +281,12 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
                         setResult(19, resultIntent);
                         broadcastIntent.putExtra("isOn",isOn);
                         sendBroadcast(broadcastIntent);
-                    }
+                    }else if(key.equals("SHOULDER")){
+                        setResult(3,resultIntent);
 
+                        neckBroadcastIntent.putExtra("isOn",isOn);
+                        sendBroadcast(neckBroadcastIntent);
+                    }
                 } else {
                     String command = getCommand();
                     BluetoothOperation.sendCommand(command);
@@ -257,6 +299,12 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
                         setResult(19, resultIntent);
                         broadcastIntent.putExtra("isOn",isOn);
                         sendBroadcast(broadcastIntent);
+                    }else if(key.equals("SHOULDER")){
+                        setResult(3,resultIntent);
+                        Modes.getModes().setNeckShoulderSequence(String.valueOf(mins1));
+                        Modes.getModes().setWaterShoulderSequence(String.valueOf(mins2));
+                        neckBroadcastIntent.putExtra("isOn",isOn);
+                        sendBroadcast(neckBroadcastIntent);
                     }
                 }
 //                onBackPressed();
@@ -329,6 +377,7 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
         String[] extractedMinute;
         String fillTiming = getIntent().getStringExtra("previous_fill_time");
         String drainTiming = getIntent().getStringExtra("previous_drain_time");
+        final String shoulder=Operations.SHOULDER.toString();
         switch (key) {
             case "FILL":
                 extractedMinute = Modes.getModes().getCleanFillTime().split(" ");
@@ -343,20 +392,35 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
                 seekBarWater.setProgress(Integer.parseInt(extractedMinute[0]));
                 mins2=Integer.parseInt(extractedMinute[0]);
                 tvSeekBarWater.setText(extractedMinute[0]);
+
+                currentCleanDrainSec = Long.parseLong(extractedMinute[0]);
+                break;
+            case "SHOULDER":
+                extractedMinute = Modes.getModes().getNeckShoulderSequence().split(" ");
+                seekBarShoulder.setProgress(Integer.parseInt(extractedMinute[0]));
+                mins1=Integer.parseInt(extractedMinute[0]);
+                tvShoulderTimer.setText(extractedMinute[0]);
+                //Toast.makeText(this, "", //Toast.LENGTH_SHORT).show();
+                currentCleanFillSec = Long.parseLong(extractedMinute[0]);
+//                //Toast.makeText(this, "the progress of hydro is " + seekBarShoulder.getProgress(), //Toast.LENGTH_SHORT).show();
+
+                extractedMinute = Modes.getModes().getWaterShoulderSequence().split(" ");
+                seekBarWater.setProgress(Integer.parseInt(extractedMinute[0]));
+                mins2=Integer.parseInt(extractedMinute[0]);
+                tvSeekBarWater.setText(extractedMinute[0]);
+
                 currentCleanDrainSec = Long.parseLong(extractedMinute[0]);
 
-                break;
         }
     }
     private void setDefaultResults() {
         if(key.equals("FILL")) {
-            if (isOn) {
                 resultIntent.putExtra("isOn", isOn);
                 setResult(19, resultIntent);
-            } else {
-                resultIntent.putExtra("isOn", isOn);
-                setResult(19, resultIntent);
-            }
+
+        }else if(key.equals("SHOULDER")){
+            resultIntent.putExtra("isOn", isOn);
+            setResult(3, resultIntent);
         }
     }
 }
