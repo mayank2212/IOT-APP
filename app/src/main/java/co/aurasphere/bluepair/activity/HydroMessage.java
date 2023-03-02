@@ -37,6 +37,136 @@ public class HydroMessage extends AppCompatActivity {
     private Boolean isAlreadyOn=false;
     Intent resultIntent=new Intent();
 
+    BroadcastReceiver hydroSequenceJet1Broadcast=new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            long currentMillis;
+            String[] extractedJet1Time = Modes.getModes().getHydroJet1Time().split(" ");
+            String[] extractedJet2Time = Modes.getModes().getHydroJet2Time().split(" ");
+            String[] extractedJet3Time = Modes.getModes().getHydroJet3Time().split(" ");
+            String[] extractedJet4Time = Modes.getModes().getHydroJet4Time().split(" ");
+
+            Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
+            Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
+            Long jet3Sec= Long.valueOf((Integer.parseInt(extractedJet3Time[0])));
+            Long jet4Sec= Long.valueOf((Integer.parseInt(extractedJet4Time[0])));
+            if(intent.getAction().equals(CustomActivity.HYDRO_SEQUENCE_JET1_BROADCAST_KEY)) {
+
+                currentMillis=Long.parseLong(extractedJet1Time[0]);
+                massage1txt.setText(((currentMillis))+"");
+                massage1.setProgress((int) (currentMillis));
+                if(jet1Sec==0 && jet2Sec==0 && jet3Sec==0 && jet4Sec==0){
+                    Log.e("TAG", "onReceive: hydro massage Activity broadcast jet1" );
+                    BluetoothOperation.sendCommand("#$HYDROSEQOFF$#");
+                    start.setText("START");
+                    isOn=false;
+                    isAlreadyOn=false;
+                    Intent broadcastIntent=new Intent(CustomActivity.HYDRO_SEQUENCE_START_STOP);
+                    broadcastIntent.putExtra("isOn",isOn);
+                    sendBroadcast(broadcastIntent);
+                    resultIntent.putExtra("isOn",isOn);
+                }
+            }
+        }
+    };
+
+
+    BroadcastReceiver hydroSequenceJet2Broadcast=new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            long currentMillis;
+            String[] extractedJet1Time = Modes.getModes().getHydroJet1Time().split(" ");
+            String[] extractedJet2Time = Modes.getModes().getHydroJet2Time().split(" ");
+            String[] extractedJet3Time = Modes.getModes().getHydroJet3Time().split(" ");
+            String[] extractedJet4Time = Modes.getModes().getHydroJet4Time().split(" ");
+
+            Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
+            Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
+            Long jet3Sec= Long.valueOf((Integer.parseInt(extractedJet3Time[0])));
+            Long jet4Sec= Long.valueOf((Integer.parseInt(extractedJet4Time[0])));
+            if(intent.getAction().equals(CustomActivity.HYDRO_SEQUENCE_JET2_BROADCAST_KEY)) {
+                currentMillis=Long.parseLong(extractedJet2Time[0]);
+                massage2txt.setText(((currentMillis))+"");
+                massage2.setProgress((int) (currentMillis));
+                if(jet1Sec==0 && jet2Sec==0 && jet3Sec==0 && jet4Sec==0){
+                    Log.e("TAG", "onReceive: hydro massage Activity broadcast jet2 jet1:"+jet1Sec );
+                    BluetoothOperation.sendCommand("#$HYDROSEQOFF$#");
+                    start.setText("START");
+                    isOn=false;
+                    isAlreadyOn=false;
+                    Intent broadcastIntent=new Intent(CustomActivity.HYDRO_SEQUENCE_START_STOP);
+                    broadcastIntent.putExtra("isOn",isOn);
+                    sendBroadcast(broadcastIntent);
+                    resultIntent.putExtra("isOn",isOn);
+                }
+            }
+        }
+    };
+    BroadcastReceiver hydroSequenceJet3Broadcast=new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            long currentMillis;
+            String[] extractedJet1Time = Modes.getModes().getHydroJet1Time().split(" ");
+            String[] extractedJet2Time = Modes.getModes().getHydroJet2Time().split(" ");
+            String[] extractedJet3Time = Modes.getModes().getHydroJet3Time().split(" ");
+            String[] extractedJet4Time = Modes.getModes().getHydroJet4Time().split(" ");
+
+            Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
+            Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
+            Long jet3Sec= Long.valueOf((Integer.parseInt(extractedJet3Time[0])));
+            Long jet4Sec= Long.valueOf((Integer.parseInt(extractedJet4Time[0])));
+            if(intent.getAction().equals(CustomActivity.HYDRO_SEQUENCE_JET3_BROADCAST_KEY)) {
+                currentMillis=Long.parseLong(extractedJet3Time[0]);
+                massage3txt.setText(((currentMillis))+"");
+                massage3.setProgress((int) (currentMillis));
+
+                if(jet1Sec==0 && jet2Sec==0 && jet3Sec==0 && jet4Sec==0){
+                    Log.e("TAG", "onReceive: hydro massage Activity broadcast jet3 jet1:"+jet1Sec );
+                    BluetoothOperation.sendCommand("#$HYDROSEQOFF$#");
+                    start.setText("START");
+                    isOn=false;
+                    isAlreadyOn=false;
+                    Intent broadcastIntent=new Intent(CustomActivity.HYDRO_SEQUENCE_START_STOP);
+                    broadcastIntent.putExtra("isOn",isOn);
+                    sendBroadcast(broadcastIntent);
+                    resultIntent.putExtra("isOn",isOn);
+                }
+            }
+        }
+    };
+    BroadcastReceiver hydroSequenceJet4Broadcast=new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            long currentMillis;
+            String[] extractedJet1Time = Modes.getModes().getHydroJet1Time().split(" ");
+            String[] extractedJet2Time = Modes.getModes().getHydroJet2Time().split(" ");
+            String[] extractedJet3Time = Modes.getModes().getHydroJet3Time().split(" ");
+            String[] extractedJet4Time = Modes.getModes().getHydroJet4Time().split(" ");
+
+            Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
+            Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
+            Long jet3Sec= Long.valueOf((Integer.parseInt(extractedJet3Time[0])));
+            Long jet4Sec= Long.valueOf((Integer.parseInt(extractedJet4Time[0])));
+            if(intent.getAction().equals(CustomActivity.HYDRO_SEQUENCE_JET4_BROADCAST_KEY)) {
+                currentMillis=Long.parseLong(extractedJet4Time[0]);
+                massage4txt.setText(((currentMillis))+"");
+                massage4.setProgress((int) (currentMillis));
+
+                if(jet1Sec==0 && jet2Sec==0 && jet3Sec==0 && jet4Sec==0){
+                    Log.e("TAG", "onReceive: hydro massage Activity broadcast jet4 jet1:"+jet1Sec );
+                    BluetoothOperation.sendCommand("#$HYDROSEQOFF$#");
+                    start.setText("START");
+                    isOn=false;
+                    isAlreadyOn=false;
+                    Intent broadcastIntent=new Intent(CustomActivity.HYDRO_SEQUENCE_START_STOP);
+                    broadcastIntent.putExtra("isOn",isOn);
+                    sendBroadcast(broadcastIntent);
+                    resultIntent.putExtra("isOn",isOn);
+                }
+            }
+        }
+    };
+    /*
     BroadcastReceiver hydroSequenceBroadcast=new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -51,6 +181,7 @@ public class HydroMessage extends AppCompatActivity {
             Long jet3Sec= Long.valueOf((Integer.parseInt(extractedJet3Time[0])));
             Long jet4Sec= Long.valueOf((Integer.parseInt(extractedJet4Time[0])));
             if(intent.getAction().equals(CustomActivity.HYDRO_SEQUENCE_BROADCAST_KEY)) {
+                Log.e("TAG", "onReceive: hydro massage Activity broadcast" );
                 currentMillis=Long.parseLong(extractedJet1Time[0]);
                 massage1txt.setText(((currentMillis))+"");
                 massage1.setProgress((int) (currentMillis));
@@ -81,18 +212,27 @@ public class HydroMessage extends AppCompatActivity {
 
             }
         }
-    };
+    };*/
 
     @Override
     protected void onStart() {
         super.onStart();
-        registerReceiver(hydroSequenceBroadcast,new IntentFilter(CustomActivity.HYDRO_SEQUENCE_BROADCAST_KEY));
+//        registerReceiver(hydroSequenceBroadcast,new IntentFilter(CustomActivity.HYDRO_SEQUENCE_BROADCAST_KEY));
+        registerReceiver(hydroSequenceJet1Broadcast,new IntentFilter(CustomActivity.HYDRO_SEQUENCE_JET1_BROADCAST_KEY));
+        registerReceiver(hydroSequenceJet2Broadcast,new IntentFilter(CustomActivity.HYDRO_SEQUENCE_JET2_BROADCAST_KEY));
+        registerReceiver(hydroSequenceJet3Broadcast,new IntentFilter(CustomActivity.HYDRO_SEQUENCE_JET3_BROADCAST_KEY));
+        registerReceiver(hydroSequenceJet4Broadcast,new IntentFilter(CustomActivity.HYDRO_SEQUENCE_JET4_BROADCAST_KEY));
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        unregisterReceiver(hydroSequenceBroadcast);
+        Log.e("TAG", "hydromassage onPause: " );
+//        unregisterReceiver(hydroSequenceBroadcast);
+        unregisterReceiver(hydroSequenceJet1Broadcast);
+        unregisterReceiver(hydroSequenceJet2Broadcast);
+        unregisterReceiver(hydroSequenceJet3Broadcast);
+        unregisterReceiver(hydroSequenceJet4Broadcast);
     }
 
     @Override

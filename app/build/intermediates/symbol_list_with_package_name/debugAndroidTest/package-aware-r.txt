@@ -1,0 +1,2 @@
+co.aurasphere.bluepair.test
+string app_name

@@ -28,6 +28,10 @@ import co.aurasphere.bluepair.operation.BluetoothOperation;
 public class CustomActivity extends AppCompatActivity implements View.OnClickListener {
 
 
+    final long[] jet1Seconds = new long[1];
+    final long[] jet2Seconds = new long[1];
+    final long[] jet3Seconds = new long[1];
+    final long[] jet4Seconds = new long[1];
     public static final String CUSTOM_MASSAGE_START_STOP = "custom_massage_start_stop";
     public static final String HEATER_CUSTOM_MASSAGE_START_STOP = "heater_custom_massage_start_stop";
     public static final String DRAIN_CUSTOM_MASSAGE_START_STOP = "drain_custom_massage_start_stop";
@@ -47,6 +51,14 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     public static final String CLEANING_DRAIN_CUSTOM_MASSAGE_BROADCAST_KEY = "CLEANING_CUSTOM_MASSAGE_BROADCAST_KEY";
     public static final String CLEANING_FALL_CUSTOM_MASSAGE_BROADCAST_KEY = "CLEANING_CUSTOM_MASSAGE_BROADCAST_KEY";
     public static final String HYDRO_SEQUENCE_BROADCAST_KEY = "HYDRO_SEQUENCE_BROADCAST_KEY";
+
+    public static final String HYDRO_SEQUENCE_JET1_BROADCAST_KEY = "HYDRO_SEQUENCE_JET1_BROADCAST_KEY";
+
+    public static final String HYDRO_SEQUENCE_JET2_BROADCAST_KEY = "HYDRO_SEQUENCE_JET2_BROADCAST_KEY";
+
+    public static final String HYDRO_SEQUENCE_JET3_BROADCAST_KEY = "HYDRO_SEQUENCE_JET3_BROADCAST_KEY";
+
+    public static final String HYDRO_SEQUENCE_JET4_BROADCAST_KEY = "HYDRO_SEQUENCE_JET4_BROADCAST_KEY";
     public static final String CUSTOM_HYDRO_SEQUENCE_BROADCAST_KEY = "CUSTOM_HYDRO_SEQUENCE_BROADCAST_KEY";
     public static final String CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY = "CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY";
     public static final String NECK_SHOULDER_WATER_SEQUENCE_BROADCAST_KEY = "NECK_SHOULDER_WATER_SEQUENCE_BROADCAST_KEY";
@@ -83,7 +95,9 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     BroadcastReceiver hydroSequenceStartStopReciever=new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
+            Log.e("TAG", "onReceive: start stop is triggered from hydro massage" );
             if(intent.getAction()==HYDRO_SEQUENCE_START_STOP) {
+                Log.e("TAG", "onReceive: isOn is "+ intent.getBooleanExtra("isOn", false));
                 if(intent.getBooleanExtra("isOn", false)){
                     turnOnHydroSequenceTimers();
                 }else{
@@ -1291,119 +1305,145 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
 //    }
 
 
-    private void turnOnHydroSequenceTimers(){
-
+    private void turnOnHydroSequenceJet1(){
         String[] extractedJet1Time = Modes.getModes().getHydroJet1Time().split(" ");
-        String[] extractedJet2Time = Modes.getModes().getHydroJet2Time().split(" ");
-        String[] extractedJet3Time = Modes.getModes().getHydroJet3Time().split(" ");
-        String[] extractedJet4Time = Modes.getModes().getHydroJet4Time().split(" ");
-//        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
-//        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
         Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
-        Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
-        Long jet3Sec= Long.valueOf((Integer.parseInt(extractedJet3Time[0])));
-        Long jet4Sec= Long.valueOf((Integer.parseInt(extractedJet4Time[0])));
-
-        final long[] jet1Seconds = new long[1];
-        final long[] jet2Seconds = new long[1];
-        final long[] jet3Seconds = new long[1];
-        final long[] jet4Seconds = new long[1];
         jet1Timer=new CountDownTimer(jet1Sec*1000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
+                Log.e("TAG", "onTick: jet1  ");
                 Modes.getModes().setHydroJet1Time(String.valueOf(millisUntilFinished/1000));
-                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
-                sendBroadcast(hydroSequenceBroadcastIntent);
-                Log.e("TAG", "onTick: jet1 "+millisUntilFinished/1000);
-                jet1Seconds[0]=millisUntilFinished/1000;
+                Intent cascadeWaterfallSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_JET1_BROADCAST_KEY);
+                sendBroadcast(cascadeWaterfallSequenceBroadcastIntent);
+                jet1Seconds[0] =millisUntilFinished/1000;
+
             }
 
             @Override
             public void onFinish() {
                 Modes.getModes().setHydroJet1Time("0");
-                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
-                sendBroadcast(hydroSequenceBroadcastIntent);
+                Intent cascadeWaterfallSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_JET1_BROADCAST_KEY);
+                sendBroadcast(cascadeWaterfallSequenceBroadcastIntent);
                 jet1Seconds[0]=0;
-                if(jet1Seconds[0]==0 && jet2Seconds[0]==0 && jet3Seconds[0]==0 && jet4Seconds[0]==0){
+                if(isAllDone()){
+                    Log.e("TAG", "onReceive: hydro massage Activity broadcast jet1 jet1:"+jet1Seconds[0] );
                     stopHydroSequenceTimers();
                 }
             }
         };
         jet1Timer.start();
-
+    }
+    private void turnOnHydroSequenceJet2(){
+        String[] extractedJet2Time = Modes.getModes().getHydroJet2Time().split(" ");
+        Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
         jet2Timer=new CountDownTimer(jet2Sec*1000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 Modes.getModes().setHydroJet2Time(String.valueOf(millisUntilFinished/1000));
-                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
-                sendBroadcast(hydroSequenceBroadcastIntent);
-                Log.e("TAG", "onTick: jet2 "+millisUntilFinished/1000);
-                jet2Seconds[0]=millisUntilFinished/1000;
+                Intent cascadeWaterfallSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_JET2_BROADCAST_KEY);
+                sendBroadcast(cascadeWaterfallSequenceBroadcastIntent);
+                jet2Seconds[0] =millisUntilFinished/1000;
+
             }
 
             @Override
             public void onFinish() {
                 Modes.getModes().setHydroJet2Time("0");
-                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
-                sendBroadcast(hydroSequenceBroadcastIntent);
+                Intent cascadeWaterfallSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_JET2_BROADCAST_KEY);
+                sendBroadcast(cascadeWaterfallSequenceBroadcastIntent);
                 jet2Seconds[0]=0;
-                if(jet1Seconds[0]==0 && jet2Seconds[0]==0 && jet3Seconds[0]==0 && jet4Seconds[0]==0){
+                if(isAllDone()){
+                    Log.e("TAG", "onReceive: hydro massage Activity broadcast jet2 jet1:"+jet1Seconds[0] );
                     stopHydroSequenceTimers();
                 }
             }
         };
         jet2Timer.start();
+    }
+    private void turnOnHydroSequenceJet3(){
+        String[] extractedJet3Time = Modes.getModes().getHydroJet3Time().split(" ");
+        Long jet3Sec= Long.valueOf((Integer.parseInt(extractedJet3Time[0])));
 
         jet3Timer=new CountDownTimer(jet3Sec*1000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 Modes.getModes().setHydroJet3Time(String.valueOf(millisUntilFinished/1000));
-                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
-                sendBroadcast(hydroSequenceBroadcastIntent);
-                Log.e("TAG", "onTick: jet3 "+millisUntilFinished/1000);
-                jet3Seconds[0]=millisUntilFinished/1000;
+                Intent cascadeWaterfallSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_JET3_BROADCAST_KEY);
+                sendBroadcast(cascadeWaterfallSequenceBroadcastIntent);
+                jet3Seconds[0] =millisUntilFinished/1000;
+
             }
 
             @Override
             public void onFinish() {
                 Modes.getModes().setHydroJet3Time("0");
-                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
-                sendBroadcast(hydroSequenceBroadcastIntent);
+                Intent cascadeWaterfallSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_JET3_BROADCAST_KEY);
+                sendBroadcast(cascadeWaterfallSequenceBroadcastIntent);
                 jet3Seconds[0]=0;
-                if(jet1Seconds[0]==0 && jet2Seconds[0]==0 && jet3Seconds[0]==0 && jet4Seconds[0]==0){
+                if(isAllDone()){
+                    Log.e("TAG", "onReceive: hydro massage Activity broadcast jet3 jet1:"+jet1Seconds[0] );
                     stopHydroSequenceTimers();
                 }
             }
         };
         jet3Timer.start();
 
+    }
+    private void turnOnHydroSequenceJet4(){
+        String[] extractedJet4Time = Modes.getModes().getHydroJet4Time().split(" ");
+        Long jet4Sec= Long.valueOf((Integer.parseInt(extractedJet4Time[0])));
         jet4Timer=new CountDownTimer(jet4Sec*1000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 Modes.getModes().setHydroJet4Time(String.valueOf(millisUntilFinished/1000));
-                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
-                sendBroadcast(hydroSequenceBroadcastIntent);
-                Log.e("TAG", "onTick: jet4 "+millisUntilFinished/1000);
-                jet4Seconds[0]=millisUntilFinished/1000;
+                Intent cascadeWaterfallSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_JET4_BROADCAST_KEY);
+                sendBroadcast(cascadeWaterfallSequenceBroadcastIntent);
+                jet4Seconds[0] =millisUntilFinished/1000;
+
             }
 
             @Override
             public void onFinish() {
                 Modes.getModes().setHydroJet4Time("0");
-                Intent hydroSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_BROADCAST_KEY);
-                sendBroadcast(hydroSequenceBroadcastIntent);
+                Intent cascadeWaterfallSequenceBroadcastIntent=new Intent(HYDRO_SEQUENCE_JET4_BROADCAST_KEY);
+                sendBroadcast(cascadeWaterfallSequenceBroadcastIntent);
                 jet4Seconds[0]=0;
-                if(jet1Seconds[0]==0 && jet2Seconds[0]==0 && jet3Seconds[0]==0 && jet4Seconds[0]==0){
+                if(isAllDone()){
+                    Log.e("TAG", "onReceive: hydro massage Activity broadcast jet4 jet1:"+jet1Seconds[0] );
                     stopHydroSequenceTimers();
                 }
             }
         };
         jet4Timer.start();
-        isOnOff.set(0, true );
-        hydroSequenceOnOff.setText("ON");
     }
+    private void turnOnHydroSequenceTimers(){
+
+        turnOnHydroSequenceJet1();
+        turnOnHydroSequenceJet2();
+        turnOnHydroSequenceJet3();
+        turnOnHydroSequenceJet4();
+    }
+    private boolean isAllDone(){
+        String[] extractedJet1Time = Modes.getModes().getHydroJet1Time().split(" ");
+        String[] extractedJet2Time = Modes.getModes().getHydroJet2Time().split(" ");
+        String[] extractedJet3Time = Modes.getModes().getHydroJet3Time().split(" ");
+        String[] extractedJet4Time = Modes.getModes().getHydroJet4Time().split(" ");
+
+        Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
+        Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
+        Long jet3Sec= Long.valueOf((Integer.parseInt(extractedJet3Time[0])));
+        Long jet4Sec= Long.valueOf((Integer.parseInt(extractedJet4Time[0])));
+
+        if(jet1Sec==0 && jet2Sec==0 && jet3Sec==0 && jet4Sec==0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     private void stopHydroSequenceTimers(){
         if(jet1Timer!=null && jet2Timer!=null && jet3Timer!=null && jet4Timer!=null) {
+            Log.e("TAG", "stopHydroSequenceTimers: invoked" );
             jet1Timer.cancel();
             jet2Timer.cancel();
             jet3Timer.cancel();

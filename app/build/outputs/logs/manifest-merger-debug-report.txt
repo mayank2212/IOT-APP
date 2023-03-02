@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-76:12
+ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
+INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
+INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
+INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
 MERGED from [com.android.support.constraint:constraint-layout:2.0.4] C:\Users\gangi\.gradle\caches\transforms-3\85e1fb4aec4057391fb24b1659230914\transformed\constraint-layout-2.0.4\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\f481b97317ca7b0ee2a4281d7a23aa0e\transformed\design-28.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.daasuu:animateHorizontalProgressBar:0.2.4] C:\Users\gangi\.gradle\caches\transforms-3\687dc19bebbde8e59abfae0680d2f27a\transformed\animateHorizontalProgressBar-0.2.4\AndroidManifest.xml:2:1-17:12
@@ -42,20 +42,20 @@ MERGED from [com.android.support:interpolator:28.0.0] C:\Users\gangi\.gradle\cac
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\3c8e0e36349a49f3efd3d23e194376aa\transformed\livedata-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\ceab58d2b341358ec83b833de4d05701\transformed\livedata-core-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\531f4f7baf0d333a940c75677298b27e\transformed\runtime-1.1.1\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
+INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
+INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
 	package
 		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-76:12
+		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
 		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-76:12
+		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
 		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:11-69
@@ -78,7 +78,7 @@ MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\ca
 	android:name
 		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:7:22-78
 application
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:9:5-74:19
+ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:9:5-75:19
 MERGED from [com.android.support.constraint:constraint-layout:2.0.4] C:\Users\gangi\.gradle\caches\transforms-3\85e1fb4aec4057391fb24b1659230914\transformed\constraint-layout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:2.0.4] C:\Users\gangi\.gradle\caches\transforms-3\85e1fb4aec4057391fb24b1659230914\transformed\constraint-layout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\f481b97317ca7b0ee2a4281d7a23aa0e\transformed\design-28.0.0\AndroidManifest.xml:22:5-20
@@ -176,7 +176,7 @@ ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:46:9
 	android:name
 		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:47:13-59
 activity#co.aurasphere.bluepair.activity.CustomActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:49:9-58:20
+ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:49:9-59:20
 	android:exported
 		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:51:13-36
 	android:name
@@ -192,31 +192,31 @@ ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:56:1
 	android:name
 		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:56:27-74
 activity#co.aurasphere.bluepair.activity.DefalutActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:59:9-61:40
+ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:60:9-62:40
 	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:61:13-37
+		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:62:13-37
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:60:13-53
+		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:61:13-53
 activity#co.aurasphere.bluepair.MainActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:62:9-64:40
+ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:63:9-65:40
 	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:64:13-37
+		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:65:13-37
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:63:13-41
+		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:64:13-41
 activity#co.aurasphere.bluepair.activity.HomePageActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:65:9-72:20
+ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:66:9-73:20
 	android:label
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:68:13-45
+		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:69:13-45
 	android:configChanges
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:67:13-59
+		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:68:13-59
 	android:theme
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:69:13-53
+		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:70:13-53
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:66:13-54
+		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:67:13-54
 activity#co.aurasphere.bluepair.operation.OperationActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:73:9-65
+ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:74:9-65
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:73:19-62
+		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:74:19-62
 uses-sdk
 INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
