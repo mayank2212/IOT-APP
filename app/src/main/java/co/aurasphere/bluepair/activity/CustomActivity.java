@@ -28,6 +28,9 @@ import co.aurasphere.bluepair.operation.BluetoothOperation;
 public class CustomActivity extends AppCompatActivity implements View.OnClickListener {
 
 
+
+    final long[] hydroSeconds = new long[1];
+    final long[] airSeconds = new long[1];
     final long[] jet1Seconds = new long[1];
     final long[] jet2Seconds = new long[1];
     final long[] jet3Seconds = new long[1];
@@ -1422,6 +1425,9 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         turnOnHydroSequenceJet2();
         turnOnHydroSequenceJet3();
         turnOnHydroSequenceJet4();
+
+        isOnOff.set(0, true );
+        hydroSequenceOnOff.setText("ON");
     }
     private boolean isAllDone(){
         String[] extractedJet1Time = Modes.getModes().getHydroJet1Time().split(" ");
@@ -1453,6 +1459,23 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
+    private boolean isCustomHydroSequenceTimersAreDone(){
+        String[] extractedJet1Time = Modes.getModes().getCustomSequenceHydro().split(" ");
+        String[] extractedJet2Time = Modes.getModes().getCustomSequenceAir().split(" ");
+
+//        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
+//        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
+        Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
+        Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
+
+        if(jet1Sec==0 && jet2Sec==0){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
     private void turnOnCustomHydroSequenceTimers(){
 
         String[] extractedJet1Time = Modes.getModes().getCustomSequenceHydro().split(" ");
@@ -1463,8 +1486,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
         Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
 
-        final long[] hydroSeconds = new long[1];
-        final long[] airSeconds = new long[1];
+
 
         customHydroSequence=new CountDownTimer(jet1Sec*1000,1000) {
             @Override
@@ -1482,7 +1504,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                 Intent customHydroSequenceBroadcastIntent=new Intent(CUSTOM_HYDRO_SEQUENCE_BROADCAST_KEY);
                 sendBroadcast(customHydroSequenceBroadcastIntent);
                 hydroSeconds[0]=0;
-                if(hydroSeconds[0]==0 && airSeconds[0]==0){
+                if(isCustomHydroSequenceTimersAreDone()){
                     stopCustomHydroSequenceTimers();
                 }
             }
@@ -1504,7 +1526,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                 Intent customHydroSequenceBroadcastIntent=new Intent(CUSTOM_HYDRO_SEQUENCE_BROADCAST_KEY);
                 sendBroadcast(customHydroSequenceBroadcastIntent);
                 airSeconds[0]=0;
-                if(hydroSeconds[0]==0 && airSeconds[0]==0){
+                if(isCustomHydroSequenceTimersAreDone()){
                     stopCustomHydroSequenceTimers();
                 }
             }
