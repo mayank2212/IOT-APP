@@ -31,6 +31,9 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
 
     final long[] hydroSeconds = new long[1];
     final long[] airSeconds = new long[1];
+
+    final long[] cascadeHydroSeconds = new long[1];
+    final long[] cascadeAirSeconds = new long[1];
     final long[] jet1Seconds = new long[1];
     final long[] jet2Seconds = new long[1];
     final long[] jet3Seconds = new long[1];
@@ -1557,8 +1560,6 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
         Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
 
-        final long[] hydroSeconds = new long[1];
-        final long[] airSeconds = new long[1];
 
         cascadeWaterfallJet1Sequence=new CountDownTimer(jet1Sec*1000,1000) {
             @Override
@@ -1566,7 +1567,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                 Modes.getModes().setCascadeWaterfallJet1(String.valueOf(millisUntilFinished/1000));
                 Intent cascadeWaterfallSequenceBroadcastIntent=new Intent(CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY);
                 sendBroadcast(cascadeWaterfallSequenceBroadcastIntent);
-                hydroSeconds[0] =millisUntilFinished/1000;
+                cascadeHydroSeconds[0] =millisUntilFinished/1000;
 
             }
 
@@ -1575,8 +1576,8 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                 Modes.getModes().setCascadeWaterfallJet1("0");
                 Intent cascadeWaterfallSequenceBroadcastIntent=new Intent(CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY);
                 sendBroadcast(cascadeWaterfallSequenceBroadcastIntent);
-                hydroSeconds[0]=0;
-                if(hydroSeconds[0]==0 && airSeconds[0]==0){
+                cascadeHydroSeconds[0]=0;
+                if(isCascadeSetOrderTimersAreDone()){
                     stopCascadeWaterfallSequenceTimers();
                 }
             }
@@ -1589,7 +1590,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                 Modes.getModes().setCascadeWaterfallJet2(String.valueOf(millisUntilFinished/1000));
                 Intent customHydroSequenceBroadcastIntent=new Intent(CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY);
                 sendBroadcast(customHydroSequenceBroadcastIntent);
-                airSeconds[0]=millisUntilFinished/1000;
+                cascadeAirSeconds[0]=millisUntilFinished/1000;
             }
 
             @Override
@@ -1597,8 +1598,8 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                 Modes.getModes().setCascadeWaterfallJet2("0");
                 Intent customHydroSequenceBroadcastIntent=new Intent(CASCADE_WATERFALL_SEQUENCE_BROADCAST_KEY);
                 sendBroadcast(customHydroSequenceBroadcastIntent);
-                airSeconds[0]=0;
-                if(hydroSeconds[0]==0 && airSeconds[0]==0){
+                cascadeAirSeconds[0]=0;
+                if(isCascadeSetOrderTimersAreDone()){
                     stopCascadeWaterfallSequenceTimers();
                 }
             }
@@ -1608,6 +1609,20 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
 
         isOnOff.set(2, true );
         waterFallSequenceOnOff.setText("ON");
+    }
+    private boolean isCascadeSetOrderTimersAreDone(){
+        String[] extractedJet1Time = Modes.getModes().getCascadeWaterfallJet1().split(" ");
+        String[] extractedJet2Time = Modes.getModes().getCascadeWaterfallJet2().split(" ");
+
+//        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
+//        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
+        Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
+        Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
+        if(jet1Sec==0 && jet2Sec==0){
+            return true;
+        }else{
+            return false;
+        }
     }
     private void stopCascadeWaterfallSequenceTimers() {
         if(cascadeWaterfallJet1Sequence!=null && cascadeWaterfallJet2Sequence!=null) {
