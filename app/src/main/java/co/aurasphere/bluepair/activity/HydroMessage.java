@@ -256,6 +256,14 @@ public class HydroMessage extends AppCompatActivity {
         massage3txt = findViewById(R.id.massage3txt);
         massage4txt = findViewById(R.id.massage4txt);
         start = findViewById(R.id.start);
+        massage1txt.setText(mins1+"");
+        massage2txt.setText(mins2+"");
+        massage3txt.setText(mins3+"");
+        massage4txt.setText(mins4+"");
+        massage1.setProgress(mins1);
+        massage2.setProgress(mins2);
+        massage3.setProgress(mins3);
+        massage4.setProgress(mins4);
         initialiseViews();
 
 //        Toast.makeText(this, ""+isAlreadyOn, Toast.LENGTH_SHORT).show();
