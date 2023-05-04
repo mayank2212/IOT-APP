@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Android\\tubs_BLE_IOT_updated\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+            "outputFile": "/home/it-5/Arramton/IOT-APP/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\gangi\\.gradle\\caches\\transforms-3\\b225ee14e2717aa3b8dabaf95cc9f9de\\transformed\\appcompat-v7-28.0.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "/home/it-5/.gradle/caches/transforms-3/b225ee14e2717aa3b8dabaf95cc9f9de/transformed/appcompat-v7-28.0.0/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\gangi\\.gradle\\caches\\transforms-3\\f481b97317ca7b0ee2a4281d7a23aa0e\\transformed\\design-28.0.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "/home/it-5/.gradle/caches/transforms-3/f481b97317ca7b0ee2a4281d7a23aa0e/transformed/design-28.0.0/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

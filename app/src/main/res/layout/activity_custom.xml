@@ -574,9 +574,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginRight="20dp"
-                android:src="@drawable/skybluesetting_icon"
-                android:tint="#6F3D60"
-                android:visibility="invisible" />
+                android:src="@drawable/chroma_setting"
+                 />
 
 
         </LinearLayout>

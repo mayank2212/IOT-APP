@@ -29,7 +29,6 @@ public class Modes {
     private String hydroJet4 ="5";
     private String cascadeWaterfallJet1 ="5";
     private String cascadeWaterfallJet2 ="5";
-
     private String customSequenceHydro ="5";
     private String customSequenceAir ="5";
 

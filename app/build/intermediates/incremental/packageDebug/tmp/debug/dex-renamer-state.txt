@@ -1,4 +1,4 @@
-#Wed Mar 08 17:37:16 IST 2023
-base.0=D\:\\Android\\tubs_BLE_IOT_updated\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Fri Apr 21 16:27:43 IST 2023
+base.0=/home/it-5/Arramton/IOT-APP/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

@@ -21,33 +21,44 @@
             android:exported="false" />
         <activity
             android:name=".activity.CustomDrainActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
+
             android:name=".activity.CustomHeaterTemp"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".activity.CustomHeaterActivity"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".activity.ShoulderAndWaterFallActivity"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".activity.CascadeSetOrderActivity"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".activity.CustomHydroMassage"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".activity.HydroMessage"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".activity.DefaultMessageActivty"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".activity.CustomMassageActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.CustomActivity"
+            android:screenOrientation="portrait"
+            android:name=".activity.HomePageActivity"
             android:exported="true" >
 
             <intent-filter>
@@ -58,20 +69,25 @@
 
         </activity>
         <activity
+            android:screenOrientation="portrait"
             android:name=".activity.DefalutActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:name=".activity.CustomActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.HomePageActivity"
+            android:screenOrientation="portrait"
+            android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.Launcher">
 
 
         </activity>
-        <activity android:name=".operation.OperationActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".operation.OperationActivity" />
     </application>
 
 </manifest>

@@ -67,6 +67,8 @@ public class CustomMassageActivity extends AppCompatActivity {
         }
     };
 
+
+
     BroadcastReceiver neckBroadcast=new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -79,6 +81,27 @@ public class CustomMassageActivity extends AppCompatActivity {
                 if(currentMillis==0){
                     tvTimer.setText("0 Min");
                     BluetoothOperation.sendCommand("#$NECKOFF$#");
+                    tvStart.setText("START");
+                    isOn = false;
+                    resultIntent.putExtra("isOn",isOn);
+                    resultIntent.putExtra("isTimeChanged",true);
+                }
+            }
+        }
+    };
+
+    BroadcastReceiver chromaLight=new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if(intent.getAction().equals(CustomActivity.CHROMA_LIGHT_BROADCAST_KEY)){
+                String[] extractedMinute = Modes.getModes().getOzoneTime().split(" ");
+                Log.e("TAG", "onReceive: chroma broadcast");
+                seekBarSelectTime.setProgress(Integer.parseInt(extractedMinute[0])/60000);
+                currentMillis= Long.parseLong(extractedMinute[0]);
+                tvTimer.setText((Integer.parseInt(extractedMinute[0]) + 60000) / 60000 + " Min");
+                if(currentMillis==0){
+                    tvTimer.setText("0 Min");
+                    BluetoothOperation.sendCommand("#$CHROMAOFF$#");
                     tvStart.setText("START");
                     isOn = false;
                     resultIntent.putExtra("isOn",isOn);
@@ -161,7 +184,7 @@ public class CustomMassageActivity extends AppCompatActivity {
 
             setDefaultResults();
             setInitialProgress(key);
-            Toast.makeText(this, "the key is " + key, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "the key is " + key, Toast.LENGTH_SHORT).show();
 
 //        isAlreadyOn=getIntent().getBooleanExtra("isOn",false);
 //        if(isAlreadyOn){
@@ -221,6 +244,13 @@ public class CustomMassageActivity extends AppCompatActivity {
                 }
                 break;
             case CHROMA:
+                if (isOn){
+                    resultIntent.putExtra("isOn",isOn);
+                    setResult(4,resultIntent);
+                }else{
+                    resultIntent.putExtra("isOn",isOn);
+                    setResult(15,resultIntent);
+                }
                 break;
             case OZONE:
                 if (isOn){
@@ -269,7 +299,7 @@ public class CustomMassageActivity extends AppCompatActivity {
                 }
             });
 
-//            isAlreadyOn=getIntent().getBooleanExtra("isOn",false);
+            isAlreadyOn=getIntent().getBooleanExtra("isOn",false);
         if(isOn){
             tvStart.setText("STOP");
         } else {
@@ -443,6 +473,31 @@ public class CustomMassageActivity extends AppCompatActivity {
                            }
                            break;
                        case CHROMA:
+                           if (isOn){
+                               BluetoothOperation.sendCommand("#$CHROMAOFF$#");
+                               tvStart.setText("START");
+                               isOn = false;
+
+                               broadcastIntent.putExtra("isOn",isOn);
+                               broadcastIntent.putExtra("key",key.toString());
+                               sendBroadcast(broadcastIntent);
+
+                               resultIntent.putExtra("isOn",isOn);
+                               resultIntent.putExtra("isTimeChanged",true);
+                               setResult(15,resultIntent);
+                           }else{
+
+                               BluetoothOperation.sendCommand("#$CHROMAON"+time+"$#");
+                               tvStart.setText("STOP");
+                               isOn = true;
+
+                               broadcastIntent.putExtra("isOn",isOn);
+                               broadcastIntent.putExtra("key",key.toString());
+                               sendBroadcast(broadcastIntent);
+
+                               resultIntent.putExtra("isOn",isOn);
+                               setResult(15,resultIntent);
+                           }
                            break;
                        case OZONE:
                            if (isOn){
@@ -482,7 +537,7 @@ public class CustomMassageActivity extends AppCompatActivity {
 
     private void setInitialProgress(Operations key){
         String timing=getIntent().getStringExtra("previous_time");
-        Toast.makeText(this, "initial time "+timing, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "initial time "+timing, Toast.LENGTH_SHORT).show();
 //        Toast.makeText(this, "previous time is "+timing, Toast.LENGTH_SHORT).show();
         String[] extractedMinute;
         switch (key){
@@ -589,6 +644,13 @@ public class CustomMassageActivity extends AppCompatActivity {
             case OZONE:
                 registerReceiver(ozoneBroadcast,new IntentFilter(CustomActivity.OZONE_CUSTOM_MASSAGE_BROADCAST_KEY));
                 break;
+            case CHROMA:
+                registerReceiver(chromaLight,new IntentFilter(CustomActivity.CHROMA_LIGHT_BROADCAST_KEY));
+                break;
+
+
+
+
         }
     }
 
@@ -611,6 +673,7 @@ public class CustomMassageActivity extends AppCompatActivity {
                 unregisterReceiver(neckBroadcast);
                 break;
             case CHROMA:
+                unregisterReceiver(chromaLight);
                 break;
             case OZONE:
                 unregisterReceiver(ozoneBroadcast);

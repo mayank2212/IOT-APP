@@ -21,7 +21,6 @@
         android:icon="@drawable/water"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="co.aurasphere.bluepair.activity.custom.CustomSequanceActivity"
@@ -31,34 +30,44 @@
             android:exported="false" />
         <activity
             android:name="co.aurasphere.bluepair.activity.CustomDrainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="co.aurasphere.bluepair.activity.CustomHeaterTemp"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="co.aurasphere.bluepair.activity.CustomHeaterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="co.aurasphere.bluepair.activity.ShoulderAndWaterFallActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="co.aurasphere.bluepair.activity.CascadeSetOrderActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="co.aurasphere.bluepair.activity.CustomHydroMassage"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="co.aurasphere.bluepair.activity.HydroMessage"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="co.aurasphere.bluepair.activity.DefaultMessageActivty"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="co.aurasphere.bluepair.activity.CustomMassageActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="co.aurasphere.bluepair.activity.CustomActivity"
-            android:exported="true" >
+            android:name="co.aurasphere.bluepair.activity.HomePageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -67,17 +76,22 @@
         </activity>
         <activity
             android:name="co.aurasphere.bluepair.activity.DefalutActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.aurasphere.bluepair.activity.CustomActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="co.aurasphere.bluepair.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name="co.aurasphere.bluepair.activity.HomePageActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Launcher" >
         </activity>
-        <activity android:name="co.aurasphere.bluepair.operation.OperationActivity" />
+        <activity
+            android:name="co.aurasphere.bluepair.operation.OperationActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

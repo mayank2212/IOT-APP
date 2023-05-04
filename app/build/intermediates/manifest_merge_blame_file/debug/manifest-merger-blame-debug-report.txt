@@ -6,150 +6,178 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="19"
-8-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
+8-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="28" />
-9-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
+9-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-11-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:5:5-74
-11-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:5:22-71
+11-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:5:5-74
+11-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:5:22-71
 12    <uses-permission android:name="android.permission.BLUETOOTH" />
-12-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:6:5-68
-12-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:6:22-65
+12-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:6:5-68
+12-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:6:22-65
 13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-13-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:7:5-81
-13-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:7:22-78
+13-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:7:5-81
+13-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:7:22-78
 14    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-14-->[com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:14:5-79
-14-->[com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:14:22-76
+14-->[com.github.Jasonchenlijian:FastBle:2.4.0] /home/it-5/.gradle/caches/transforms-3/906b441e74bb3cc50e1412c025ec6c93/transformed/FastBle-2.4.0/AndroidManifest.xml:14:5-79
+14-->[com.github.Jasonchenlijian:FastBle:2.4.0] /home/it-5/.gradle/caches/transforms-3/906b441e74bb3cc50e1412c025ec6c93/transformed/FastBle-2.4.0/AndroidManifest.xml:14:22-76
 15
 16    <application
-16-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:9:5-75:19
+16-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:9:5-91:19
 17        android:name="co.aurasphere.bluepair.MyApplication"
-17-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:10:9-38
+17-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:10:9-38
 18        android:allowBackup="true"
-18-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:11:9-35
+18-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:11:9-35
 19        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
-19-->[com.android.support:support-compat:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4e7b08d1fb13418c58a1f8a8f1a1923b\transformed\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+19-->[com.android.support:support-compat:28.0.0] /home/it-5/.gradle/caches/transforms-3/4e7b08d1fb13418c58a1f8a8f1a1923b/transformed/support-compat-28.0.0/AndroidManifest.xml:22:18-91
 20        android:debuggable="true"
 21        android:icon="@drawable/water"
-21-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:12:9-39
+21-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:12:9-39
 22        android:label="@string/app_name"
-22-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:13:9-41
+22-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:13:9-41
 23        android:supportsRtl="true"
-23-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:14:9-35
-24        android:testOnly="true"
-25        android:theme="@style/AppTheme" >
-25-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:15:9-40
-26        <activity
-26-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:16:9-18:40
-27            android:name="co.aurasphere.bluepair.activity.custom.CustomSequanceActivity"
-27-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:17:13-67
-28            android:exported="false" />
-28-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:18:13-37
-29        <activity
-29-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:19:9-21:40
-30            android:name="co.aurasphere.bluepair.activity.BluetoothActivity"
-30-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:20:13-55
-31            android:exported="false" />
-31-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:21:13-37
-32        <activity
-32-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:22:9-24:40
-33            android:name="co.aurasphere.bluepair.activity.CustomDrainActivity"
-33-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:23:13-57
-34            android:exported="false" />
-34-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:24:13-37
+23-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:14:9-35
+24        android:theme="@style/AppTheme" >
+24-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:15:9-40
+25        <activity
+25-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:16:9-18:40
+26            android:name="co.aurasphere.bluepair.activity.custom.CustomSequanceActivity"
+26-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:17:13-67
+27            android:exported="false" />
+27-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:18:13-37
+28        <activity
+28-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:19:9-21:40
+29            android:name="co.aurasphere.bluepair.activity.BluetoothActivity"
+29-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:20:13-55
+30            android:exported="false" />
+30-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:21:13-37
+31        <activity
+31-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:22:9-25:40
+32            android:name="co.aurasphere.bluepair.activity.CustomDrainActivity"
+32-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:23:13-57
+33            android:exported="false"
+33-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:25:13-37
+34            android:screenOrientation="portrait" />
+34-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:24:13-49
 35        <activity
-35-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:25:9-27:40
+35-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:26:9-30:40
 36            android:name="co.aurasphere.bluepair.activity.CustomHeaterTemp"
-36-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:26:13-54
-37            android:exported="false" />
-37-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:27:13-37
-38        <activity
-38-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:28:9-30:40
-39            android:name="co.aurasphere.bluepair.activity.CustomHeaterActivity"
-39-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:29:13-58
-40            android:exported="false" />
-40-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:30:13-37
-41        <activity
-41-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:31:9-33:40
-42            android:name="co.aurasphere.bluepair.activity.ShoulderAndWaterFallActivity"
-42-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:32:13-66
-43            android:exported="false" />
-43-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:33:13-37
-44        <activity
-44-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:34:9-36:40
-45            android:name="co.aurasphere.bluepair.activity.CascadeSetOrderActivity"
-45-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:35:13-61
-46            android:exported="false" />
-46-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:36:13-37
+36-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:29:13-54
+37            android:exported="false"
+37-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:30:13-37
+38            android:screenOrientation="portrait" />
+38-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:27:13-49
+39        <activity
+39-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:31:9-34:40
+40            android:name="co.aurasphere.bluepair.activity.CustomHeaterActivity"
+40-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:33:13-58
+41            android:exported="false"
+41-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:34:13-37
+42            android:screenOrientation="portrait" />
+42-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:32:13-49
+43        <activity
+43-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:35:9-38:40
+44            android:name="co.aurasphere.bluepair.activity.ShoulderAndWaterFallActivity"
+44-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:37:13-66
+45            android:exported="false"
+45-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:38:13-37
+46            android:screenOrientation="portrait" />
+46-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:36:13-49
 47        <activity
-47-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:37:9-39:40
-48            android:name="co.aurasphere.bluepair.activity.CustomHydroMassage"
-48-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:38:13-56
-49            android:exported="false" />
-49-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:39:13-37
-50        <activity
-50-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:40:9-42:40
-51            android:name="co.aurasphere.bluepair.activity.HydroMessage"
-51-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:41:13-50
-52            android:exported="false" />
-52-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:42:13-37
-53        <activity
-53-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:43:9-45:40
-54            android:name="co.aurasphere.bluepair.activity.DefaultMessageActivty"
-54-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:44:13-59
-55            android:exported="false" />
-55-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:45:13-37
-56        <activity
-56-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:46:9-48:40
-57            android:name="co.aurasphere.bluepair.activity.CustomMassageActivity"
-57-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:47:13-59
-58            android:exported="false" />
-58-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:48:13-37
+47-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:39:9-42:40
+48            android:name="co.aurasphere.bluepair.activity.CascadeSetOrderActivity"
+48-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:41:13-61
+49            android:exported="false"
+49-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:42:13-37
+50            android:screenOrientation="portrait" />
+50-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:40:13-49
+51        <activity
+51-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:43:9-46:40
+52            android:name="co.aurasphere.bluepair.activity.CustomHydroMassage"
+52-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:45:13-56
+53            android:exported="false"
+53-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:46:13-37
+54            android:screenOrientation="portrait" />
+54-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:44:13-49
+55        <activity
+55-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:47:9-50:40
+56            android:name="co.aurasphere.bluepair.activity.HydroMessage"
+56-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:49:13-50
+57            android:exported="false"
+57-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:50:13-37
+58            android:screenOrientation="portrait" />
+58-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:48:13-49
 59        <activity
-59-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:49:9-59:20
-60            android:name="co.aurasphere.bluepair.activity.CustomActivity"
-60-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:50:13-52
-61            android:exported="true" >
-61-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:51:13-36
-62            <intent-filter>
-62-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:53:13-57:29
-63                <action android:name="android.intent.action.MAIN" />
-63-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:54:17-69
-63-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:54:25-66
-64
-65                <category android:name="android.intent.category.LAUNCHER" />
-65-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:56:17-77
-65-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:56:27-74
-66            </intent-filter>
-67        </activity>
-68        <activity
-68-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:60:9-62:40
-69            android:name="co.aurasphere.bluepair.activity.DefalutActivity"
-69-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:61:13-53
-70            android:exported="false" />
-70-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:62:13-37
-71        <activity
-71-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:63:9-65:40
-72            android:name="co.aurasphere.bluepair.MainActivity"
-72-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:64:13-41
-73            android:exported="false" />
-73-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:65:13-37
-74        <activity
-74-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:66:9-73:20
-75            android:name="co.aurasphere.bluepair.activity.HomePageActivity"
-75-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:67:13-54
-76            android:configChanges="orientation|screenSize"
-76-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:68:13-59
-77            android:label="@string/app_name"
-77-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:69:13-45
-78            android:theme="@style/AppTheme.Launcher" >
-78-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:70:13-53
-79        </activity>
-80        <activity android:name="co.aurasphere.bluepair.operation.OperationActivity" />
-80-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:74:9-65
-80-->D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:74:19-62
-81    </application>
-82
-83</manifest>
+59-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:51:9-54:40
+60            android:name="co.aurasphere.bluepair.activity.DefaultMessageActivty"
+60-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:53:13-59
+61            android:exported="false"
+61-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:54:13-37
+62            android:screenOrientation="portrait" />
+62-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:52:13-49
+63        <activity
+63-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:55:9-58:40
+64            android:name="co.aurasphere.bluepair.activity.CustomMassageActivity"
+64-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:57:13-59
+65            android:exported="false"
+65-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:58:13-37
+66            android:screenOrientation="portrait" />
+66-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:56:13-49
+67        <activity
+67-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:59:9-70:20
+68            android:name="co.aurasphere.bluepair.activity.HomePageActivity"
+68-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:61:13-54
+69            android:exported="true"
+69-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:62:13-36
+70            android:screenOrientation="portrait" >
+70-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:60:13-49
+71            <intent-filter>
+71-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:64:13-68:29
+72                <action android:name="android.intent.action.MAIN" />
+72-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:65:17-69
+72-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:65:25-66
+73
+74                <category android:name="android.intent.category.LAUNCHER" />
+74-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:67:17-77
+74-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:67:27-74
+75            </intent-filter>
+76        </activity>
+77        <activity
+77-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:71:9-74:40
+78            android:name="co.aurasphere.bluepair.activity.DefalutActivity"
+78-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:73:13-53
+79            android:exported="false"
+79-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:74:13-37
+80            android:screenOrientation="portrait" />
+80-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:72:13-49
+81        <activity
+81-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:75:9-78:40
+82            android:name="co.aurasphere.bluepair.activity.CustomActivity"
+82-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:77:13-52
+83            android:exported="false"
+83-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:78:13-37
+84            android:screenOrientation="portrait" />
+84-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:76:13-49
+85        <activity
+85-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:79:9-87:20
+86            android:name="co.aurasphere.bluepair.MainActivity"
+86-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:81:13-41
+87            android:configChanges="orientation|screenSize"
+87-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:82:13-59
+88            android:label="@string/app_name"
+88-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:83:13-45
+89            android:screenOrientation="portrait"
+89-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:80:13-49
+90            android:theme="@style/AppTheme.Launcher" >
+90-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:84:13-53
+91        </activity>
+92        <activity
+92-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:88:9-90:59
+93            android:name="co.aurasphere.bluepair.operation.OperationActivity"
+93-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:90:13-56
+94            android:screenOrientation="portrait" />
+94-->/home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:89:13-49
+95    </application>
+96
+97</manifest>

@@ -52,6 +52,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     public static final String WATER_CUSTOM_MASSAGE_BROADCAST_KEY = "WATER_CUSTOM_MASSAGE_BROADCAST_KEY";
     public static final String NECK_CUSTOM_MASSAGE_BROADCAST_KEY = "NECK_CUSTOM_MASSAGE_BROADCAST_KEY";
     public static final String OZONE_CUSTOM_MASSAGE_BROADCAST_KEY = "OZONE_CUSTOM_MASSAGE_BROADCAST_KEY";
+    public static final String CHROMA_LIGHT_BROADCAST_KEY = "CHROMA_LIGHT_BROADCAST_KEY";
     public static final String HEATER_CUSTOM_MASSAGE_BROADCAST_KEY = "HEATER_CUSTOM_MASSAGE_BROADCAST_KEY";
     public static final String DRAIN_CUSTOM_MASSAGE_BROADCAST_KEY = "DRAIN_CUSTOM_MASSAGE_BROADCAST_KEY";
     public static final String CLEANING_DRAIN_CUSTOM_MASSAGE_BROADCAST_KEY = "CLEANING_CUSTOM_MASSAGE_BROADCAST_KEY";
@@ -170,7 +171,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     BroadcastReceiver drainBroadcastStartStop=new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Toast.makeText(CustomActivity.this,"drain start stop recieved",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(CustomActivity.this,"drain start stop recieved",Toast.LENGTH_SHORT).show();
             if(intent.getAction()==DRAIN_CUSTOM_MASSAGE_START_STOP) {
 
                 handleDrain(intent.getBooleanExtra("isOn", false));
@@ -695,14 +696,16 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                 neckFall.putExtra("isAlreadyOn",isAlreadyOn.get(3));
                 startActivityForResult(neckFall,14);
                 break;
-//            case R.id.custom_chroma_fall_setting:
-//                Intent chromaFall=new Intent(CustomActivity.this,CustomMassageActivity.class);
-//                chromaFall.putExtra("title","Chroma Fall");
-//                chromaFall.putExtra("key",Operations.CHROMA);
-//                chromaFall.putExtra("time",chromaTimer);
-//                startActivity(chromaFall);
-////                finish();
-//                break;
+            case R.id.custom_chroma_fall_setting:
+                Intent chromaFall=new Intent(CustomActivity.this,CustomMassageActivity.class);
+                chromaFall.putExtra("title","Chroma Fall");
+                chromaFall.putExtra("key",Operations.CHROMA);
+                chromaFall.putExtra("time",chromaTimer);
+                chromaFall.putExtra("previous_time",timings.get(4));
+                chromaFall.putExtra("isAlreadyOn",isAlreadyOn.get(4));
+                startActivityForResult(chromaFall,15);
+//                finish();
+                break;
 
             case R.id.custom_ozone_setting:
                 Intent ozone=new Intent(CustomActivity.this,CustomMassageActivity.class);

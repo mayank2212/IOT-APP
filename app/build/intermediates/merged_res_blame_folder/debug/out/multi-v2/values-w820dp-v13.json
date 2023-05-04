@@ -1,16 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Android\\tubs_BLE_IOT_updated\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+            "outputFile": "/home/it-5/Arramton/IOT-APP/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "D:\\Android\\tubs_BLE_IOT_updated\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "source": "/home/it-5/Arramton/IOT-APP/app/src/main/res/values-w820dp/dimens.xml",
                     "from": {
                         "startLines": "28",
                         "startColumns": "4",
-                        "startOffsets": "1438",
+                        "startOffsets": "1410",
                         "endColumns": "57",
-                        "endOffsets": "1491"
+                        "endOffsets": "1463"
                     },
                     "to": {
                         "startLines": "2",

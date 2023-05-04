@@ -197,12 +197,13 @@ public class HomePageActivity extends AppCompatActivity {
     void goToDefault(){
         if (BluetoothOperation.isDeviceConnected()){
             BluetoothOperation.sendCommand("#$DEFAULTSET$#");
+//            Toast.makeText(HomePageActivity.this, "Default contect ", Toast.LENGTH_SHORT).show();
+
             tvOnOff.setText("OFF");
         }
         else{
             Toast.makeText(HomePageActivity.this, "Device does not connected ", Toast.LENGTH_SHORT).show();
             tvOnOff.setText("ON");
-
         }
     }
 

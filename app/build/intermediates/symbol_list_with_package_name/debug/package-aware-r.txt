@@ -1236,6 +1236,7 @@ drawable blue_yellow_bg
 drawable bluetooth
 drawable border_shadow
 drawable button
+drawable chroma_setting
 drawable circle
 drawable circular_image_view
 drawable clean_svg

@@ -1,313 +1,341 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
-MERGED from [com.android.support.constraint:constraint-layout:2.0.4] C:\Users\gangi\.gradle\caches\transforms-3\85e1fb4aec4057391fb24b1659230914\transformed\constraint-layout-2.0.4\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:design:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\f481b97317ca7b0ee2a4281d7a23aa0e\transformed\design-28.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.daasuu:animateHorizontalProgressBar:0.2.4] C:\Users\gangi\.gradle\caches\transforms-3\687dc19bebbde8e59abfae0680d2f27a\transformed\animateHorizontalProgressBar-0.2.4\AndroidManifest.xml:2:1-17:12
-MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] C:\Users\gangi\.gradle\caches\transforms-3\af428ee3257e45e699fb4fafc431b92e\transformed\Knob-1.9.0\AndroidManifest.xml:2:1-17:12
-MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] C:\Users\gangi\.gradle\caches\transforms-3\ee6871deb850bdf0422629474ef7f22d\transformed\BalloonPopup-0.2.8\AndroidManifest.xml:2:1-17:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\b225ee14e2717aa3b8dabaf95cc9f9de\transformed\appcompat-v7-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\fce1cd6bbd2872d07317bf1bab952e7d\transformed\support-v4-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\37db634bfab4cb0480377530e326d05b\transformed\recyclerview-v7-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:2:1-16:12
-MERGED from [me.tankery.lib:circularSeekBar:1.3.2] C:\Users\gangi\.gradle\caches\transforms-3\3f2459e6aee3c511a3b147e0a3cbf40a\transformed\circularSeekBar-1.3.2\AndroidManifest.xml:2:1-12:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\48cb6ff0cb7828ada40fa03057b9662f\transformed\support-fragment-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\aa642983f071893439ff0e4e83bbe1a8\transformed\animated-vector-drawable-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\199e79838d9f35b38c9ac29204bad00c\transformed\support-core-ui-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\7c13f8f9e7d659d7d62297870315578b\transformed\support-core-utils-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\cccff6935ff37fa7ce8e28fe14d989f6\transformed\support-vector-drawable-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\86aab7e66b00113db5b4a5a98a6f0566\transformed\transition-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\d14a1c5a6f57220d2ca81c7f8cbb85af\transformed\support-media-compat-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\6d2897cdf15d9769504527c22475814b\transformed\loader-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\dcd2de46eb263d5143685b8f14aa41d3\transformed\viewpager-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\661aa68c36a1f5e3980cf62e03c9e0fe\transformed\coordinatorlayout-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\ff654a87f5eae39d97f572b4616670fd\transformed\drawerlayout-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\3228dacd270066cc775768f09c35b1c4\transformed\slidingpanelayout-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\634f5143915dc922914f34d97f3a3c6e\transformed\customview-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\d34d3d21bacdd9cda3117437cdbbb388\transformed\swiperefreshlayout-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4831437440131d8a4147db3f60cafd54\transformed\asynclayoutinflater-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4e7b08d1fb13418c58a1f8a8f1a1923b\transformed\support-compat-28.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4e2bc7be93a86fbabb76c4b4b00bb66b\transformed\versionedparcelable-28.0.0\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\f6fbd3dac85ae880fdbefd2cc6c09194\transformed\cursoradapter-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\3e1714a0f073d54e531eb73fcbb55a83\transformed\cardview-v7-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\90de1385781baa08f696260be9c93c76\transformed\runtime-1.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\61a283b7bc0c8e3a40960d47a5b37cbb\transformed\documentfile-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\6ed34e79b3e7081464d49bb3faef9658\transformed\localbroadcastmanager-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\f92e4cbc33fc27d197ac7df8ca82f84f\transformed\print-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\08a5bbae7a7d2c4444e7386016994500\transformed\viewmodel-1.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\e56ead71a8876cc9322c8da040323344\transformed\interpolator-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\3c8e0e36349a49f3efd3d23e194376aa\transformed\livedata-1.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\ceab58d2b341358ec83b833de4d05701\transformed\livedata-core-1.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\531f4f7baf0d333a940c75677298b27e\transformed\runtime-1.1.1\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:2:1-93:12
+INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:2:1-93:12
+INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:2:1-93:12
+INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:2:1-93:12
+MERGED from [com.android.support.constraint:constraint-layout:2.0.4] /home/it-5/.gradle/caches/transforms-3/85e1fb4aec4057391fb24b1659230914/transformed/constraint-layout-2.0.4/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:design:28.0.0] /home/it-5/.gradle/caches/transforms-3/f481b97317ca7b0ee2a4281d7a23aa0e/transformed/design-28.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.daasuu:animateHorizontalProgressBar:0.2.4] /home/it-5/.gradle/caches/transforms-3/687dc19bebbde8e59abfae0680d2f27a/transformed/animateHorizontalProgressBar-0.2.4/AndroidManifest.xml:2:1-17:12
+MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] /home/it-5/.gradle/caches/transforms-3/af428ee3257e45e699fb4fafc431b92e/transformed/Knob-1.9.0/AndroidManifest.xml:2:1-17:12
+MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] /home/it-5/.gradle/caches/transforms-3/ee6871deb850bdf0422629474ef7f22d/transformed/BalloonPopup-0.2.8/AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/it-5/.gradle/caches/transforms-3/b225ee14e2717aa3b8dabaf95cc9f9de/transformed/appcompat-v7-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:28.0.0] /home/it-5/.gradle/caches/transforms-3/fce1cd6bbd2872d07317bf1bab952e7d/transformed/support-v4-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/it-5/.gradle/caches/transforms-3/37db634bfab4cb0480377530e326d05b/transformed/recyclerview-v7-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] /home/it-5/.gradle/caches/transforms-3/906b441e74bb3cc50e1412c025ec6c93/transformed/FastBle-2.4.0/AndroidManifest.xml:2:1-16:12
+MERGED from [me.tankery.lib:circularSeekBar:1.3.2] /home/it-5/.gradle/caches/transforms-3/3f2459e6aee3c511a3b147e0a3cbf40a/transformed/circularSeekBar-1.3.2/AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/it-5/.gradle/caches/transforms-3/48cb6ff0cb7828ada40fa03057b9662f/transformed/support-fragment-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/it-5/.gradle/caches/transforms-3/aa642983f071893439ff0e4e83bbe1a8/transformed/animated-vector-drawable-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/it-5/.gradle/caches/transforms-3/199e79838d9f35b38c9ac29204bad00c/transformed/support-core-ui-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/it-5/.gradle/caches/transforms-3/7c13f8f9e7d659d7d62297870315578b/transformed/support-core-utils-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/it-5/.gradle/caches/transforms-3/cccff6935ff37fa7ce8e28fe14d989f6/transformed/support-vector-drawable-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /home/it-5/.gradle/caches/transforms-3/86aab7e66b00113db5b4a5a98a6f0566/transformed/transition-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/it-5/.gradle/caches/transforms-3/d14a1c5a6f57220d2ca81c7f8cbb85af/transformed/support-media-compat-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/it-5/.gradle/caches/transforms-3/6d2897cdf15d9769504527c22475814b/transformed/loader-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/it-5/.gradle/caches/transforms-3/dcd2de46eb263d5143685b8f14aa41d3/transformed/viewpager-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/it-5/.gradle/caches/transforms-3/661aa68c36a1f5e3980cf62e03c9e0fe/transformed/coordinatorlayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/it-5/.gradle/caches/transforms-3/ff654a87f5eae39d97f572b4616670fd/transformed/drawerlayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/it-5/.gradle/caches/transforms-3/3228dacd270066cc775768f09c35b1c4/transformed/slidingpanelayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/it-5/.gradle/caches/transforms-3/634f5143915dc922914f34d97f3a3c6e/transformed/customview-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/it-5/.gradle/caches/transforms-3/d34d3d21bacdd9cda3117437cdbbb388/transformed/swiperefreshlayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/it-5/.gradle/caches/transforms-3/4831437440131d8a4147db3f60cafd54/transformed/asynclayoutinflater-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/it-5/.gradle/caches/transforms-3/4e7b08d1fb13418c58a1f8a8f1a1923b/transformed/support-compat-28.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/it-5/.gradle/caches/transforms-3/4e2bc7be93a86fbabb76c4b4b00bb66b/transformed/versionedparcelable-28.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/it-5/.gradle/caches/transforms-3/f6fbd3dac85ae880fdbefd2cc6c09194/transformed/cursoradapter-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/it-5/.gradle/caches/transforms-3/3e1714a0f073d54e531eb73fcbb55a83/transformed/cardview-v7-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/it-5/.gradle/caches/transforms-3/90de1385781baa08f696260be9c93c76/transformed/runtime-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/it-5/.gradle/caches/transforms-3/61a283b7bc0c8e3a40960d47a5b37cbb/transformed/documentfile-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/it-5/.gradle/caches/transforms-3/6ed34e79b3e7081464d49bb3faef9658/transformed/localbroadcastmanager-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/it-5/.gradle/caches/transforms-3/f92e4cbc33fc27d197ac7df8ca82f84f/transformed/print-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/it-5/.gradle/caches/transforms-3/08a5bbae7a7d2c4444e7386016994500/transformed/viewmodel-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/it-5/.gradle/caches/transforms-3/e56ead71a8876cc9322c8da040323344/transformed/interpolator-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/it-5/.gradle/caches/transforms-3/3c8e0e36349a49f3efd3d23e194376aa/transformed/livedata-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/it-5/.gradle/caches/transforms-3/ceab58d2b341358ec83b833de4d05701/transformed/livedata-core-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/it-5/.gradle/caches/transforms-3/531f4f7baf0d333a940c75677298b27e/transformed/runtime-1.1.1/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:2:1-93:12
+INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:2:1-93:12
+INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:2:1-93:12
 	package
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:3:5-37
-		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:3:5-37
+		INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
+		INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
-		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
+		INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:2:1-93:12
+		INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:1-77:12
-		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
+		INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:2:1-93:12
+		INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:5:5-74
-MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:12:5-74
-MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:12:5-74
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:5:5-74
+MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] /home/it-5/.gradle/caches/transforms-3/906b441e74bb3cc50e1412c025ec6c93/transformed/FastBle-2.4.0/AndroidManifest.xml:12:5-74
+MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] /home/it-5/.gradle/caches/transforms-3/906b441e74bb3cc50e1412c025ec6c93/transformed/FastBle-2.4.0/AndroidManifest.xml:12:5-74
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:5:22-71
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:5:22-71
 uses-permission#android.permission.BLUETOOTH
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:6:5-68
-MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:11:5-68
-MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:11:5-68
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:6:5-68
+MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] /home/it-5/.gradle/caches/transforms-3/906b441e74bb3cc50e1412c025ec6c93/transformed/FastBle-2.4.0/AndroidManifest.xml:11:5-68
+MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] /home/it-5/.gradle/caches/transforms-3/906b441e74bb3cc50e1412c025ec6c93/transformed/FastBle-2.4.0/AndroidManifest.xml:11:5-68
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:6:22-65
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:6:22-65
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:7:5-81
-MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:13:5-81
-MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:13:5-81
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:7:5-81
+MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] /home/it-5/.gradle/caches/transforms-3/906b441e74bb3cc50e1412c025ec6c93/transformed/FastBle-2.4.0/AndroidManifest.xml:13:5-81
+MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] /home/it-5/.gradle/caches/transforms-3/906b441e74bb3cc50e1412c025ec6c93/transformed/FastBle-2.4.0/AndroidManifest.xml:13:5-81
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:7:22-78
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:7:22-78
 application
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:9:5-75:19
-MERGED from [com.android.support.constraint:constraint-layout:2.0.4] C:\Users\gangi\.gradle\caches\transforms-3\85e1fb4aec4057391fb24b1659230914\transformed\constraint-layout-2.0.4\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:2.0.4] C:\Users\gangi\.gradle\caches\transforms-3\85e1fb4aec4057391fb24b1659230914\transformed\constraint-layout-2.0.4\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:design:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\f481b97317ca7b0ee2a4281d7a23aa0e\transformed\design-28.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\f481b97317ca7b0ee2a4281d7a23aa0e\transformed\design-28.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.daasuu:animateHorizontalProgressBar:0.2.4] C:\Users\gangi\.gradle\caches\transforms-3\687dc19bebbde8e59abfae0680d2f27a\transformed\animateHorizontalProgressBar-0.2.4\AndroidManifest.xml:11:5-15:19
-MERGED from [com.daasuu:animateHorizontalProgressBar:0.2.4] C:\Users\gangi\.gradle\caches\transforms-3\687dc19bebbde8e59abfae0680d2f27a\transformed\animateHorizontalProgressBar-0.2.4\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] C:\Users\gangi\.gradle\caches\transforms-3\af428ee3257e45e699fb4fafc431b92e\transformed\Knob-1.9.0\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] C:\Users\gangi\.gradle\caches\transforms-3\af428ee3257e45e699fb4fafc431b92e\transformed\Knob-1.9.0\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] C:\Users\gangi\.gradle\caches\transforms-3\ee6871deb850bdf0422629474ef7f22d\transformed\BalloonPopup-0.2.8\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] C:\Users\gangi\.gradle\caches\transforms-3\ee6871deb850bdf0422629474ef7f22d\transformed\BalloonPopup-0.2.8\AndroidManifest.xml:11:5-15:19
-MERGED from [me.tankery.lib:circularSeekBar:1.3.2] C:\Users\gangi\.gradle\caches\transforms-3\3f2459e6aee3c511a3b147e0a3cbf40a\transformed\circularSeekBar-1.3.2\AndroidManifest.xml:10:5-20
-MERGED from [me.tankery.lib:circularSeekBar:1.3.2] C:\Users\gangi\.gradle\caches\transforms-3\3f2459e6aee3c511a3b147e0a3cbf40a\transformed\circularSeekBar-1.3.2\AndroidManifest.xml:10:5-20
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4e7b08d1fb13418c58a1f8a8f1a1923b\transformed\support-compat-28.0.0\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4e7b08d1fb13418c58a1f8a8f1a1923b\transformed\support-compat-28.0.0\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4e2bc7be93a86fbabb76c4b4b00bb66b\transformed\versionedparcelable-28.0.0\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4e2bc7be93a86fbabb76c4b4b00bb66b\transformed\versionedparcelable-28.0.0\AndroidManifest.xml:22:5-23:19
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:9:5-91:19
+MERGED from [com.android.support.constraint:constraint-layout:2.0.4] /home/it-5/.gradle/caches/transforms-3/85e1fb4aec4057391fb24b1659230914/transformed/constraint-layout-2.0.4/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:2.0.4] /home/it-5/.gradle/caches/transforms-3/85e1fb4aec4057391fb24b1659230914/transformed/constraint-layout-2.0.4/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:28.0.0] /home/it-5/.gradle/caches/transforms-3/f481b97317ca7b0ee2a4281d7a23aa0e/transformed/design-28.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /home/it-5/.gradle/caches/transforms-3/f481b97317ca7b0ee2a4281d7a23aa0e/transformed/design-28.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.daasuu:animateHorizontalProgressBar:0.2.4] /home/it-5/.gradle/caches/transforms-3/687dc19bebbde8e59abfae0680d2f27a/transformed/animateHorizontalProgressBar-0.2.4/AndroidManifest.xml:11:5-15:19
+MERGED from [com.daasuu:animateHorizontalProgressBar:0.2.4] /home/it-5/.gradle/caches/transforms-3/687dc19bebbde8e59abfae0680d2f27a/transformed/animateHorizontalProgressBar-0.2.4/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] /home/it-5/.gradle/caches/transforms-3/af428ee3257e45e699fb4fafc431b92e/transformed/Knob-1.9.0/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] /home/it-5/.gradle/caches/transforms-3/af428ee3257e45e699fb4fafc431b92e/transformed/Knob-1.9.0/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] /home/it-5/.gradle/caches/transforms-3/ee6871deb850bdf0422629474ef7f22d/transformed/BalloonPopup-0.2.8/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] /home/it-5/.gradle/caches/transforms-3/ee6871deb850bdf0422629474ef7f22d/transformed/BalloonPopup-0.2.8/AndroidManifest.xml:11:5-15:19
+MERGED from [me.tankery.lib:circularSeekBar:1.3.2] /home/it-5/.gradle/caches/transforms-3/3f2459e6aee3c511a3b147e0a3cbf40a/transformed/circularSeekBar-1.3.2/AndroidManifest.xml:10:5-20
+MERGED from [me.tankery.lib:circularSeekBar:1.3.2] /home/it-5/.gradle/caches/transforms-3/3f2459e6aee3c511a3b147e0a3cbf40a/transformed/circularSeekBar-1.3.2/AndroidManifest.xml:10:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /home/it-5/.gradle/caches/transforms-3/4e7b08d1fb13418c58a1f8a8f1a1923b/transformed/support-compat-28.0.0/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/it-5/.gradle/caches/transforms-3/4e7b08d1fb13418c58a1f8a8f1a1923b/transformed/support-compat-28.0.0/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/it-5/.gradle/caches/transforms-3/4e2bc7be93a86fbabb76c4b4b00bb66b/transformed/versionedparcelable-28.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/it-5/.gradle/caches/transforms-3/4e2bc7be93a86fbabb76c4b4b00bb66b/transformed/versionedparcelable-28.0.0/AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4e7b08d1fb13418c58a1f8a8f1a1923b\transformed\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] /home/it-5/.gradle/caches/transforms-3/4e7b08d1fb13418c58a1f8a8f1a1923b/transformed/support-compat-28.0.0/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:13:9-41
 	android:icon
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:12:9-39
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:12:9-39
 	android:allowBackup
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:15:9-40
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:15:9-40
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:10:9-38
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:10:9-38
 activity#co.aurasphere.bluepair.activity.custom.CustomSequanceActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:16:9-18:40
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:16:9-18:40
 	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:18:13-37
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:18:13-37
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:17:13-67
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:17:13-67
 activity#co.aurasphere.bluepair.activity.BluetoothActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:19:9-21:40
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:19:9-21:40
 	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:21:13-37
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:20:13-55
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:20:13-55
 activity#co.aurasphere.bluepair.activity.CustomDrainActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:22:9-24:40
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:22:9-25:40
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:24:13-49
 	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:24:13-37
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:25:13-37
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:23:13-57
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:23:13-57
 activity#co.aurasphere.bluepair.activity.CustomHeaterTemp
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:25:9-27:40
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:26:9-30:40
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:27:13-49
 	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:27:13-37
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:26:13-54
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:29:13-54
 activity#co.aurasphere.bluepair.activity.CustomHeaterActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:28:9-30:40
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:31:9-34:40
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:32:13-49
 	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:30:13-37
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:29:13-58
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:33:13-58
 activity#co.aurasphere.bluepair.activity.ShoulderAndWaterFallActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:31:9-33:40
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:35:9-38:40
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:36:13-49
 	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:33:13-37
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:38:13-37
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:32:13-66
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:37:13-66
 activity#co.aurasphere.bluepair.activity.CascadeSetOrderActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:34:9-36:40
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:39:9-42:40
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:40:13-49
 	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:36:13-37
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:35:13-61
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:41:13-61
 activity#co.aurasphere.bluepair.activity.CustomHydroMassage
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:37:9-39:40
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:43:9-46:40
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:44:13-49
 	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:39:13-37
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:46:13-37
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:38:13-56
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:45:13-56
 activity#co.aurasphere.bluepair.activity.HydroMessage
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:40:9-42:40
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:47:9-50:40
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:48:13-49
 	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:42:13-37
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:50:13-37
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:41:13-50
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:49:13-50
 activity#co.aurasphere.bluepair.activity.DefaultMessageActivty
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:43:9-45:40
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:51:9-54:40
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:52:13-49
 	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:45:13-37
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:54:13-37
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:44:13-59
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:53:13-59
 activity#co.aurasphere.bluepair.activity.CustomMassageActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:46:9-48:40
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:55:9-58:40
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:56:13-49
 	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:48:13-37
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:58:13-37
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:47:13-59
-activity#co.aurasphere.bluepair.activity.CustomActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:49:9-59:20
-	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:51:13-36
-	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:50:13-52
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:53:13-57:29
-action#android.intent.action.MAIN
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:54:17-69
-	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:54:25-66
-category#android.intent.category.LAUNCHER
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:56:17-77
-	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:56:27-74
-activity#co.aurasphere.bluepair.activity.DefalutActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:60:9-62:40
-	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:62:13-37
-	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:61:13-53
-activity#co.aurasphere.bluepair.MainActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:63:9-65:40
-	android:exported
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:65:13-37
-	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:64:13-41
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:57:13-59
 activity#co.aurasphere.bluepair.activity.HomePageActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:66:9-73:20
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:59:9-70:20
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:60:13-49
+	android:exported
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:62:13-36
+	android:name
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:61:13-54
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:64:13-68:29
+action#android.intent.action.MAIN
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:65:17-69
+	android:name
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:65:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:67:17-77
+	android:name
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:67:27-74
+activity#co.aurasphere.bluepair.activity.DefalutActivity
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:71:9-74:40
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:72:13-49
+	android:exported
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:74:13-37
+	android:name
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:73:13-53
+activity#co.aurasphere.bluepair.activity.CustomActivity
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:75:9-78:40
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:76:13-49
+	android:exported
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:78:13-37
+	android:name
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:77:13-52
+activity#co.aurasphere.bluepair.MainActivity
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:79:9-87:20
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:80:13-49
 	android:label
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:69:13-45
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:83:13-45
 	android:configChanges
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:68:13-59
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:82:13-59
 	android:theme
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:70:13-53
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:84:13-53
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:67:13-54
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:81:13-41
 activity#co.aurasphere.bluepair.operation.OperationActivity
-ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:74:9-65
+ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:88:9-90:59
+	android:screenOrientation
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:89:13-49
 	android:name
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml:74:19-62
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml:90:13-56
 uses-sdk
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support.constraint:constraint-layout:2.0.4] C:\Users\gangi\.gradle\caches\transforms-3\85e1fb4aec4057391fb24b1659230914\transformed\constraint-layout-2.0.4\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:2.0.4] C:\Users\gangi\.gradle\caches\transforms-3\85e1fb4aec4057391fb24b1659230914\transformed\constraint-layout-2.0.4\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:design:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\f481b97317ca7b0ee2a4281d7a23aa0e\transformed\design-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\f481b97317ca7b0ee2a4281d7a23aa0e\transformed\design-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.daasuu:animateHorizontalProgressBar:0.2.4] C:\Users\gangi\.gradle\caches\transforms-3\687dc19bebbde8e59abfae0680d2f27a\transformed\animateHorizontalProgressBar-0.2.4\AndroidManifest.xml:7:5-9:41
-MERGED from [com.daasuu:animateHorizontalProgressBar:0.2.4] C:\Users\gangi\.gradle\caches\transforms-3\687dc19bebbde8e59abfae0680d2f27a\transformed\animateHorizontalProgressBar-0.2.4\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] C:\Users\gangi\.gradle\caches\transforms-3\af428ee3257e45e699fb4fafc431b92e\transformed\Knob-1.9.0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] C:\Users\gangi\.gradle\caches\transforms-3\af428ee3257e45e699fb4fafc431b92e\transformed\Knob-1.9.0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] C:\Users\gangi\.gradle\caches\transforms-3\ee6871deb850bdf0422629474ef7f22d\transformed\BalloonPopup-0.2.8\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] C:\Users\gangi\.gradle\caches\transforms-3\ee6871deb850bdf0422629474ef7f22d\transformed\BalloonPopup-0.2.8\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\b225ee14e2717aa3b8dabaf95cc9f9de\transformed\appcompat-v7-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\b225ee14e2717aa3b8dabaf95cc9f9de\transformed\appcompat-v7-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\fce1cd6bbd2872d07317bf1bab952e7d\transformed\support-v4-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\fce1cd6bbd2872d07317bf1bab952e7d\transformed\support-v4-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\37db634bfab4cb0480377530e326d05b\transformed\recyclerview-v7-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\37db634bfab4cb0480377530e326d05b\transformed\recyclerview-v7-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:7:5-9:41
-MERGED from [me.tankery.lib:circularSeekBar:1.3.2] C:\Users\gangi\.gradle\caches\transforms-3\3f2459e6aee3c511a3b147e0a3cbf40a\transformed\circularSeekBar-1.3.2\AndroidManifest.xml:6:5-8:41
-MERGED from [me.tankery.lib:circularSeekBar:1.3.2] C:\Users\gangi\.gradle\caches\transforms-3\3f2459e6aee3c511a3b147e0a3cbf40a\transformed\circularSeekBar-1.3.2\AndroidManifest.xml:6:5-8:41
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\48cb6ff0cb7828ada40fa03057b9662f\transformed\support-fragment-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\48cb6ff0cb7828ada40fa03057b9662f\transformed\support-fragment-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\aa642983f071893439ff0e4e83bbe1a8\transformed\animated-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\aa642983f071893439ff0e4e83bbe1a8\transformed\animated-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\199e79838d9f35b38c9ac29204bad00c\transformed\support-core-ui-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\199e79838d9f35b38c9ac29204bad00c\transformed\support-core-ui-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\7c13f8f9e7d659d7d62297870315578b\transformed\support-core-utils-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\7c13f8f9e7d659d7d62297870315578b\transformed\support-core-utils-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\cccff6935ff37fa7ce8e28fe14d989f6\transformed\support-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\cccff6935ff37fa7ce8e28fe14d989f6\transformed\support-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\86aab7e66b00113db5b4a5a98a6f0566\transformed\transition-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\86aab7e66b00113db5b4a5a98a6f0566\transformed\transition-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\d14a1c5a6f57220d2ca81c7f8cbb85af\transformed\support-media-compat-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\d14a1c5a6f57220d2ca81c7f8cbb85af\transformed\support-media-compat-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\6d2897cdf15d9769504527c22475814b\transformed\loader-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\6d2897cdf15d9769504527c22475814b\transformed\loader-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\dcd2de46eb263d5143685b8f14aa41d3\transformed\viewpager-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\dcd2de46eb263d5143685b8f14aa41d3\transformed\viewpager-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\661aa68c36a1f5e3980cf62e03c9e0fe\transformed\coordinatorlayout-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\661aa68c36a1f5e3980cf62e03c9e0fe\transformed\coordinatorlayout-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\ff654a87f5eae39d97f572b4616670fd\transformed\drawerlayout-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\ff654a87f5eae39d97f572b4616670fd\transformed\drawerlayout-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\3228dacd270066cc775768f09c35b1c4\transformed\slidingpanelayout-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\3228dacd270066cc775768f09c35b1c4\transformed\slidingpanelayout-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\634f5143915dc922914f34d97f3a3c6e\transformed\customview-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\634f5143915dc922914f34d97f3a3c6e\transformed\customview-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\d34d3d21bacdd9cda3117437cdbbb388\transformed\swiperefreshlayout-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\d34d3d21bacdd9cda3117437cdbbb388\transformed\swiperefreshlayout-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4831437440131d8a4147db3f60cafd54\transformed\asynclayoutinflater-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4831437440131d8a4147db3f60cafd54\transformed\asynclayoutinflater-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4e7b08d1fb13418c58a1f8a8f1a1923b\transformed\support-compat-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4e7b08d1fb13418c58a1f8a8f1a1923b\transformed\support-compat-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4e2bc7be93a86fbabb76c4b4b00bb66b\transformed\versionedparcelable-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\4e2bc7be93a86fbabb76c4b4b00bb66b\transformed\versionedparcelable-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\f6fbd3dac85ae880fdbefd2cc6c09194\transformed\cursoradapter-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\f6fbd3dac85ae880fdbefd2cc6c09194\transformed\cursoradapter-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\3e1714a0f073d54e531eb73fcbb55a83\transformed\cardview-v7-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\3e1714a0f073d54e531eb73fcbb55a83\transformed\cardview-v7-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\90de1385781baa08f696260be9c93c76\transformed\runtime-1.1.1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\90de1385781baa08f696260be9c93c76\transformed\runtime-1.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\61a283b7bc0c8e3a40960d47a5b37cbb\transformed\documentfile-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\61a283b7bc0c8e3a40960d47a5b37cbb\transformed\documentfile-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\6ed34e79b3e7081464d49bb3faef9658\transformed\localbroadcastmanager-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\6ed34e79b3e7081464d49bb3faef9658\transformed\localbroadcastmanager-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\f92e4cbc33fc27d197ac7df8ca82f84f\transformed\print-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\f92e4cbc33fc27d197ac7df8ca82f84f\transformed\print-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\08a5bbae7a7d2c4444e7386016994500\transformed\viewmodel-1.1.1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\08a5bbae7a7d2c4444e7386016994500\transformed\viewmodel-1.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\e56ead71a8876cc9322c8da040323344\transformed\interpolator-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\gangi\.gradle\caches\transforms-3\e56ead71a8876cc9322c8da040323344\transformed\interpolator-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\3c8e0e36349a49f3efd3d23e194376aa\transformed\livedata-1.1.1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\3c8e0e36349a49f3efd3d23e194376aa\transformed\livedata-1.1.1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\ceab58d2b341358ec83b833de4d05701\transformed\livedata-core-1.1.1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\ceab58d2b341358ec83b833de4d05701\transformed\livedata-core-1.1.1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\531f4f7baf0d333a940c75677298b27e\transformed\runtime-1.1.1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\gangi\.gradle\caches\transforms-3\531f4f7baf0d333a940c75677298b27e\transformed\runtime-1.1.1\AndroidManifest.xml:20:5-44
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
-INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
+INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
+INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support.constraint:constraint-layout:2.0.4] /home/it-5/.gradle/caches/transforms-3/85e1fb4aec4057391fb24b1659230914/transformed/constraint-layout-2.0.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:2.0.4] /home/it-5/.gradle/caches/transforms-3/85e1fb4aec4057391fb24b1659230914/transformed/constraint-layout-2.0.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:28.0.0] /home/it-5/.gradle/caches/transforms-3/f481b97317ca7b0ee2a4281d7a23aa0e/transformed/design-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /home/it-5/.gradle/caches/transforms-3/f481b97317ca7b0ee2a4281d7a23aa0e/transformed/design-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.daasuu:animateHorizontalProgressBar:0.2.4] /home/it-5/.gradle/caches/transforms-3/687dc19bebbde8e59abfae0680d2f27a/transformed/animateHorizontalProgressBar-0.2.4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.daasuu:animateHorizontalProgressBar:0.2.4] /home/it-5/.gradle/caches/transforms-3/687dc19bebbde8e59abfae0680d2f27a/transformed/animateHorizontalProgressBar-0.2.4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] /home/it-5/.gradle/caches/transforms-3/af428ee3257e45e699fb4fafc431b92e/transformed/Knob-1.9.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] /home/it-5/.gradle/caches/transforms-3/af428ee3257e45e699fb4fafc431b92e/transformed/Knob-1.9.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] /home/it-5/.gradle/caches/transforms-3/ee6871deb850bdf0422629474ef7f22d/transformed/BalloonPopup-0.2.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] /home/it-5/.gradle/caches/transforms-3/ee6871deb850bdf0422629474ef7f22d/transformed/BalloonPopup-0.2.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/it-5/.gradle/caches/transforms-3/b225ee14e2717aa3b8dabaf95cc9f9de/transformed/appcompat-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/it-5/.gradle/caches/transforms-3/b225ee14e2717aa3b8dabaf95cc9f9de/transformed/appcompat-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /home/it-5/.gradle/caches/transforms-3/fce1cd6bbd2872d07317bf1bab952e7d/transformed/support-v4-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /home/it-5/.gradle/caches/transforms-3/fce1cd6bbd2872d07317bf1bab952e7d/transformed/support-v4-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/it-5/.gradle/caches/transforms-3/37db634bfab4cb0480377530e326d05b/transformed/recyclerview-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/it-5/.gradle/caches/transforms-3/37db634bfab4cb0480377530e326d05b/transformed/recyclerview-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] /home/it-5/.gradle/caches/transforms-3/906b441e74bb3cc50e1412c025ec6c93/transformed/FastBle-2.4.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Jasonchenlijian:FastBle:2.4.0] /home/it-5/.gradle/caches/transforms-3/906b441e74bb3cc50e1412c025ec6c93/transformed/FastBle-2.4.0/AndroidManifest.xml:7:5-9:41
+MERGED from [me.tankery.lib:circularSeekBar:1.3.2] /home/it-5/.gradle/caches/transforms-3/3f2459e6aee3c511a3b147e0a3cbf40a/transformed/circularSeekBar-1.3.2/AndroidManifest.xml:6:5-8:41
+MERGED from [me.tankery.lib:circularSeekBar:1.3.2] /home/it-5/.gradle/caches/transforms-3/3f2459e6aee3c511a3b147e0a3cbf40a/transformed/circularSeekBar-1.3.2/AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:support-fragment:28.0.0] /home/it-5/.gradle/caches/transforms-3/48cb6ff0cb7828ada40fa03057b9662f/transformed/support-fragment-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/it-5/.gradle/caches/transforms-3/48cb6ff0cb7828ada40fa03057b9662f/transformed/support-fragment-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/it-5/.gradle/caches/transforms-3/aa642983f071893439ff0e4e83bbe1a8/transformed/animated-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/it-5/.gradle/caches/transforms-3/aa642983f071893439ff0e4e83bbe1a8/transformed/animated-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/it-5/.gradle/caches/transforms-3/199e79838d9f35b38c9ac29204bad00c/transformed/support-core-ui-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/it-5/.gradle/caches/transforms-3/199e79838d9f35b38c9ac29204bad00c/transformed/support-core-ui-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/it-5/.gradle/caches/transforms-3/7c13f8f9e7d659d7d62297870315578b/transformed/support-core-utils-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/it-5/.gradle/caches/transforms-3/7c13f8f9e7d659d7d62297870315578b/transformed/support-core-utils-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/it-5/.gradle/caches/transforms-3/cccff6935ff37fa7ce8e28fe14d989f6/transformed/support-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/it-5/.gradle/caches/transforms-3/cccff6935ff37fa7ce8e28fe14d989f6/transformed/support-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/it-5/.gradle/caches/transforms-3/86aab7e66b00113db5b4a5a98a6f0566/transformed/transition-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/it-5/.gradle/caches/transforms-3/86aab7e66b00113db5b4a5a98a6f0566/transformed/transition-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/it-5/.gradle/caches/transforms-3/d14a1c5a6f57220d2ca81c7f8cbb85af/transformed/support-media-compat-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/it-5/.gradle/caches/transforms-3/d14a1c5a6f57220d2ca81c7f8cbb85af/transformed/support-media-compat-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/it-5/.gradle/caches/transforms-3/6d2897cdf15d9769504527c22475814b/transformed/loader-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/it-5/.gradle/caches/transforms-3/6d2897cdf15d9769504527c22475814b/transformed/loader-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/it-5/.gradle/caches/transforms-3/dcd2de46eb263d5143685b8f14aa41d3/transformed/viewpager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/it-5/.gradle/caches/transforms-3/dcd2de46eb263d5143685b8f14aa41d3/transformed/viewpager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/it-5/.gradle/caches/transforms-3/661aa68c36a1f5e3980cf62e03c9e0fe/transformed/coordinatorlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/it-5/.gradle/caches/transforms-3/661aa68c36a1f5e3980cf62e03c9e0fe/transformed/coordinatorlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/it-5/.gradle/caches/transforms-3/ff654a87f5eae39d97f572b4616670fd/transformed/drawerlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/it-5/.gradle/caches/transforms-3/ff654a87f5eae39d97f572b4616670fd/transformed/drawerlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/it-5/.gradle/caches/transforms-3/3228dacd270066cc775768f09c35b1c4/transformed/slidingpanelayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/it-5/.gradle/caches/transforms-3/3228dacd270066cc775768f09c35b1c4/transformed/slidingpanelayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/it-5/.gradle/caches/transforms-3/634f5143915dc922914f34d97f3a3c6e/transformed/customview-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/it-5/.gradle/caches/transforms-3/634f5143915dc922914f34d97f3a3c6e/transformed/customview-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/it-5/.gradle/caches/transforms-3/d34d3d21bacdd9cda3117437cdbbb388/transformed/swiperefreshlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/it-5/.gradle/caches/transforms-3/d34d3d21bacdd9cda3117437cdbbb388/transformed/swiperefreshlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/it-5/.gradle/caches/transforms-3/4831437440131d8a4147db3f60cafd54/transformed/asynclayoutinflater-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/it-5/.gradle/caches/transforms-3/4831437440131d8a4147db3f60cafd54/transformed/asynclayoutinflater-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/it-5/.gradle/caches/transforms-3/4e7b08d1fb13418c58a1f8a8f1a1923b/transformed/support-compat-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/it-5/.gradle/caches/transforms-3/4e7b08d1fb13418c58a1f8a8f1a1923b/transformed/support-compat-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/it-5/.gradle/caches/transforms-3/4e2bc7be93a86fbabb76c4b4b00bb66b/transformed/versionedparcelable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/it-5/.gradle/caches/transforms-3/4e2bc7be93a86fbabb76c4b4b00bb66b/transformed/versionedparcelable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/it-5/.gradle/caches/transforms-3/f6fbd3dac85ae880fdbefd2cc6c09194/transformed/cursoradapter-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/it-5/.gradle/caches/transforms-3/f6fbd3dac85ae880fdbefd2cc6c09194/transformed/cursoradapter-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/it-5/.gradle/caches/transforms-3/3e1714a0f073d54e531eb73fcbb55a83/transformed/cardview-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/it-5/.gradle/caches/transforms-3/3e1714a0f073d54e531eb73fcbb55a83/transformed/cardview-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/it-5/.gradle/caches/transforms-3/90de1385781baa08f696260be9c93c76/transformed/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/it-5/.gradle/caches/transforms-3/90de1385781baa08f696260be9c93c76/transformed/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/it-5/.gradle/caches/transforms-3/61a283b7bc0c8e3a40960d47a5b37cbb/transformed/documentfile-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/it-5/.gradle/caches/transforms-3/61a283b7bc0c8e3a40960d47a5b37cbb/transformed/documentfile-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/it-5/.gradle/caches/transforms-3/6ed34e79b3e7081464d49bb3faef9658/transformed/localbroadcastmanager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/it-5/.gradle/caches/transforms-3/6ed34e79b3e7081464d49bb3faef9658/transformed/localbroadcastmanager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/it-5/.gradle/caches/transforms-3/f92e4cbc33fc27d197ac7df8ca82f84f/transformed/print-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/it-5/.gradle/caches/transforms-3/f92e4cbc33fc27d197ac7df8ca82f84f/transformed/print-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/it-5/.gradle/caches/transforms-3/08a5bbae7a7d2c4444e7386016994500/transformed/viewmodel-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/it-5/.gradle/caches/transforms-3/08a5bbae7a7d2c4444e7386016994500/transformed/viewmodel-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/it-5/.gradle/caches/transforms-3/e56ead71a8876cc9322c8da040323344/transformed/interpolator-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/it-5/.gradle/caches/transforms-3/e56ead71a8876cc9322c8da040323344/transformed/interpolator-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/it-5/.gradle/caches/transforms-3/3c8e0e36349a49f3efd3d23e194376aa/transformed/livedata-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/it-5/.gradle/caches/transforms-3/3c8e0e36349a49f3efd3d23e194376aa/transformed/livedata-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/it-5/.gradle/caches/transforms-3/ceab58d2b341358ec83b833de4d05701/transformed/livedata-core-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/it-5/.gradle/caches/transforms-3/ceab58d2b341358ec83b833de4d05701/transformed/livedata-core-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/it-5/.gradle/caches/transforms-3/531f4f7baf0d333a940c75677298b27e/transformed/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/it-5/.gradle/caches/transforms-3/531f4f7baf0d333a940c75677298b27e/transformed/runtime-1.1.1/AndroidManifest.xml:20:5-44
+INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
+INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
+		INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
+		INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Android\tubs_BLE_IOT_updated\app\src\main\AndroidManifest.xml
+		INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
+		ADDED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
+		INJECTED from /home/it-5/Arramton/IOT-APP/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from [com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:14:5-79
+ADDED from [com.github.Jasonchenlijian:FastBle:2.4.0] /home/it-5/.gradle/caches/transforms-3/906b441e74bb3cc50e1412c025ec6c93/transformed/FastBle-2.4.0/AndroidManifest.xml:14:5-79
 	android:name
-		ADDED from [com.github.Jasonchenlijian:FastBle:2.4.0] C:\Users\gangi\.gradle\caches\transforms-3\906b441e74bb3cc50e1412c025ec6c93\transformed\FastBle-2.4.0\AndroidManifest.xml:14:22-76
+		ADDED from [com.github.Jasonchenlijian:FastBle:2.4.0] /home/it-5/.gradle/caches/transforms-3/906b441e74bb3cc50e1412c025ec6c93/transformed/FastBle-2.4.0/AndroidManifest.xml:14:22-76
