@@ -30,7 +30,7 @@ public class CustomHeaterActivity extends AppCompatActivity {
                 tvCustomHeaterTimer.setText((Integer.parseInt(extractedMinute[0]) + 60000) / 60000 + " Min");
 
                 if(currentMillis==0){
-                    Toast.makeText(context, "heater is completed activity", Toast.LENGTH_SHORT).show();
+//                     (context, "heater is completed activity", Toast.LENGTH_SHORT).show();
                     tvCustomHeaterTimer.setText("0 Min");
                     BluetoothOperation.sendCommand("#$HEATEROFF$#");
                     custom_massage_start.setText("START");
@@ -96,7 +96,7 @@ public class CustomHeaterActivity extends AppCompatActivity {
                 mins = i;
                 tvCustomHeaterTimer.setText(String.valueOf(i) + "\nMin");
                 currentMillis = i * 60000;
-//                Toast.makeText(CustomHeaterActivity.this, "seek : "+i, Toast.LENGTH_SHORT).show();
+//                 (CustomHeaterActivity.this, "seek : "+i, Toast.LENGTH_SHORT).show();
 
             }
 
@@ -128,7 +128,7 @@ public class CustomHeaterActivity extends AppCompatActivity {
 
                     broadcastIntent.putExtra("isOn",isOn);
                     sendBroadcast(broadcastIntent);
-//                    Toast.makeText(CustomHeaterActivity.this, "in off : " + isOn, Toast.LENGTH_SHORT).show();
+//                     (CustomHeaterActivity.this, "in off : " + isOn, Toast.LENGTH_SHORT).show();
                     resultIntent.putExtra("isOn", isOn);
                     setResult(17, resultIntent);
                 } else {
@@ -137,7 +137,7 @@ public class CustomHeaterActivity extends AppCompatActivity {
                     isOn = true;
                     broadcastIntent.putExtra("isOn",isOn);
                     sendBroadcast(broadcastIntent);
-//                    Toast.makeText(CustomHeaterActivity.this, "in on : " + isOn, Toast.LENGTH_SHORT).show();
+//                     (CustomHeaterActivity.this, "in on : " + isOn, Toast.LENGTH_SHORT).show();
                     resultIntent.putExtra("isOn", isOn);
                     Modes.getModes().setHeaterTime(currentMillis + " Min");
                     resultIntent.putExtra("isOn", isOn);
@@ -172,7 +172,7 @@ public class CustomHeaterActivity extends AppCompatActivity {
         });
         String[] extractedMinute = Modes.getModes().getHeaterTime().split(" ");
         seekBarHeater.setProgress(Integer.parseInt(extractedMinute[0])/60000);
-//        Toast.makeText(this, "heater progress"+Integer.parseInt(extractedMinute[0]), Toast.LENGTH_SHORT).show();
+//         (this, "heater progress"+Integer.parseInt(extractedMinute[0]), Toast.LENGTH_SHORT).show();
         String timing=getIntent().getStringExtra("previous_time");
         tvCustomHeaterTimer.setText(timing+" Min");
 

@@ -171,7 +171,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     BroadcastReceiver drainBroadcastStartStop=new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-//            Toast.makeText(CustomActivity.this,"drain start stop recieved",Toast.LENGTH_SHORT).show();
+//             (CustomActivity.this,"drain start stop recieved",Toast.LENGTH_SHORT).show();
             if(intent.getAction()==DRAIN_CUSTOM_MASSAGE_START_STOP) {
 
                 handleDrain(intent.getBooleanExtra("isOn", false));
@@ -393,12 +393,12 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b){
                     BluetoothOperation.sendCommand("#$HYDROON010$#");
-//                    Toast.makeText(CustomActivity.this,"Hydro Massage On "+Modes.getModes().getHydroTime(),Toast.LENGTH_SHORT).show();
+//                     (CustomActivity.this,"Hydro Massage On "+Modes.getModes().getHydroTime(),Toast.LENGTH_SHORT).show();
                     tvHydroMassageOnOff.setText("ON");
                 }else{
                     BluetoothOperation.sendCommand("#$HYDROOFF$#");
                     tvHydroMassageOnOff.setText("OFF");
-//                    Toast.makeText(CustomActivity.this,"Hydro Massage Off ",Toast.LENGTH_SHORT).show();
+//                     (CustomActivity.this,"Hydro Massage Off ",Toast.LENGTH_SHORT).show();
 
                 }
                 handleHydro(b,true);
@@ -410,7 +410,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         tvHydroSequance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(CustomActivity.this, "OnClick", Toast.LENGTH_SHORT).show();
+                // (CustomActivity.this, "OnClick", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(CustomActivity.this, HydroMessage.class);
                 intent.putExtra("isOn",isOnOff.get(0));
                 startActivityForResult(intent,0);
@@ -752,7 +752,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                     intent.putExtra("title2","Drain");
                     intent.putExtra("key1","FILL");
                     intent.putExtra("isAlreadyOn",isAlreadyOn.get(8));
-//                    Toast.makeText(this, "is already on in custom "+isAlreadyOn.get(8), Toast.LENGTH_SHORT).show();
+//                     (this, "is already on in custom "+isAlreadyOn.get(8), Toast.LENGTH_SHORT).show();
                     intent.putExtra("previous_fill_time",timings.get(8));
                     intent.putExtra("previous_fill_time",timings.get(9));
                     startActivityForResult(intent,19);
@@ -787,7 +787,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
 //        if(data!=null) {
             Boolean isOn = data.getBooleanExtra("isOn", false);
 //        }
-//        Toast.makeText(this, "result code is  "+ resultCode, Toast.LENGTH_SHORT).show();
+//         (this, "result code is  "+ resultCode, Toast.LENGTH_SHORT).show();
         switch (resultCode){
             case 0 :
                 isOnOff.set(0, isOn );
@@ -855,7 +855,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
 //                    countDownTimers.get(8).start();
 //                }else{
 //                    countDownTimers.get(8).cancel();
-//                    Toast.makeText(this, "cleaning is paused", Toast.LENGTH_SHORT).show();
+//                     (this, "cleaning is paused", Toast.LENGTH_SHORT).show();
 //                }
 //                break;
 
@@ -872,10 +872,10 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
 //        updateTimes();
     }
     private void handleCleaning(boolean isStarted) {
-//        Toast.makeText(this, "in clean custom", Toast.LENGTH_SHORT).show();
+//         (this, "in clean custom", Toast.LENGTH_SHORT).show();
         String[] extractedFillMinute = Modes.getModes().getCleanFillTime().split(" ");
         String[] extractedDrainMinute = Modes.getModes().getCleanDrainTime().split(" ");
-//        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
+//         (this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
 //        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
         Long fallSeconds= Long.valueOf((Integer.parseInt(extractedFillMinute[0])));
         Long drainSeconds= Long.valueOf((Integer.parseInt(extractedDrainMinute[0])));
@@ -883,7 +883,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         if(isStarted){
             countDownTimers.get(8).cancel();
             countDownTimers.get(9).cancel();
-//            Toast.makeText(this, "in hydro if", Toast.LENGTH_SHORT).show();
+//             (this, "in hydro if", Toast.LENGTH_SHORT).show();
             CountDownTimer fallTimer=new CountDownTimer(fallSeconds*1000,1000) {
                 @Override
                 public void onTick(long millisUntilFinished) {
@@ -948,8 +948,8 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
 
 
         }else{
-//            Toast.makeText(this, "in hydro else", Toast.LENGTH_SHORT).show();
-//            Toast.makeText(this, "WaterFall is paused", Toast.LENGTH_SHORT).show();
+//             (this, "in hydro else", Toast.LENGTH_SHORT).show();
+//             (this, "WaterFall is paused", Toast.LENGTH_SHORT).show();
             countDownTimers.get(8).cancel();
             countDownTimers.get(9).cancel();
             isAlreadyOn.set(8,false);
@@ -961,13 +961,13 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
 
     private void handleHydro(boolean isStarted,boolean isChanged) {
         String[] extractedMinute = Modes.getModes().getHydroTime().split(" ");
-//        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
+//         (this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
 //        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
         Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])));
 
         if(isStarted){
             countDownTimers.get(0).cancel();
-//            Toast.makeText(this, "in hydro if", Toast.LENGTH_SHORT).show();
+//             (this, "in hydro if", Toast.LENGTH_SHORT).show();
             CountDownTimer hydroTimer=new CountDownTimer(hydroMillis,1000) {
                 @Override
                 public void onTick(long millisUntilFinished) {
@@ -998,8 +998,8 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
             countDownTimers.get(0).start();
             isAlreadyOn.set(0,true);
         }else{
-//            Toast.makeText(this, "in hydro else", Toast.LENGTH_SHORT).show();
-//            Toast.makeText(this, "WaterFall is paused", Toast.LENGTH_SHORT).show();
+//             (this, "in hydro else", Toast.LENGTH_SHORT).show();
+//             (this, "WaterFall is paused", Toast.LENGTH_SHORT).show();
             countDownTimers.get(0).cancel();
             isAlreadyOn.set(0,false);
             tvHydroMassageOnOff.setText("OFF");
@@ -1044,7 +1044,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         }else{
             countDownTimers.get(1).cancel();
             isAlreadyOn.set(1,false);
-//            Toast.makeText(this, "Air Massage is paused", Toast.LENGTH_SHORT).show();
+//             (this, "Air Massage is paused", Toast.LENGTH_SHORT).show();
             tvAirMassageONOFF.setText("OFF");
             BluetoothOperation.sendCommand("#$AIROFF$#");
         }
@@ -1087,7 +1087,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
             countDownTimers.get(2).start();
             isAlreadyOn.set(2,true);
         }else{
-//            Toast.makeText(this, "WaterFall is paused", Toast.LENGTH_SHORT).show();
+//             (this, "WaterFall is paused", Toast.LENGTH_SHORT).show();
             countDownTimers.get(2).cancel();
             isAlreadyOn.set(2,false);
             tvWaterFallOnOFF.setText("OFF");
@@ -1132,7 +1132,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         }else{
             countDownTimers.get(3).cancel();
             isAlreadyOn.set(3,false);
-//            Toast.makeText(this, "Neck Fall is paused", Toast.LENGTH_SHORT).show();
+//             (this, "Neck Fall is paused", Toast.LENGTH_SHORT).show();
             tvNeckFallOnOff.setText("OFF");
             BluetoothOperation.sendCommand("#$NECKOFF$#");
         }
@@ -1175,7 +1175,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         }else{
             countDownTimers.get(5).cancel();
             isAlreadyOn.set(5,false);
-//            Toast.makeText(this, "Ozone is paused", Toast.LENGTH_SHORT).show();
+//             (this, "Ozone is paused", Toast.LENGTH_SHORT).show();
             tvOzoneOnOff.setText("OFF");
             BluetoothOperation.sendCommand("#$OZONEOFF$#");
         }
@@ -1185,7 +1185,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
 //        Long heaterMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
         Long heaterMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])));
 
-//        Toast.makeText(this, "heater is : "+isStarted, Toast.LENGTH_SHORT).show();
+//         (this, "heater is : "+isStarted, Toast.LENGTH_SHORT).show();
         if(isStarted){
             countDownTimers.get(6).cancel();
             CountDownTimer heaterTimer=new CountDownTimer(heaterMillis,1000) {
@@ -1219,7 +1219,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         }else{
             countDownTimers.get(6).cancel();
             isAlreadyOn.set(6,false);
-//            Toast.makeText(this, "heater is paused", Toast.LENGTH_SHORT).show();
+//             (this, "heater is paused", Toast.LENGTH_SHORT).show();
             tvHeaterONOFF.setText("OFF");
             BluetoothOperation.sendCommand("#$HEATEROFF$#");
         }
@@ -1257,7 +1257,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         }else{
             countDownTimers.get(4).cancel();
             isAlreadyOn.set(4,false);
-//            Toast.makeText(this, "drain is paused", Toast.LENGTH_SHORT).show();
+//             (this, "drain is paused", Toast.LENGTH_SHORT).show();
             tvChromaLightONOFF.setText(switchState);
         }
     }
@@ -1304,7 +1304,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         }else{
             countDownTimers.get(7).cancel();
             isAlreadyOn.set(7,false);
-//            Toast.makeText(this, "drain is paused", Toast.LENGTH_SHORT).show();
+//             (this, "drain is paused", Toast.LENGTH_SHORT).show();
             checkBoxDrainOnOff.setText("OFF");
             BluetoothOperation.sendCommand("#$DRAINOFF$#");
         }
@@ -1469,7 +1469,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         String[] extractedJet1Time = Modes.getModes().getCustomSequenceHydro().split(" ");
         String[] extractedJet2Time = Modes.getModes().getCustomSequenceAir().split(" ");
 
-//        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
+//         (this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
 //        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
         Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
         Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
@@ -1487,7 +1487,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         String[] extractedJet1Time = Modes.getModes().getCustomSequenceHydro().split(" ");
         String[] extractedJet2Time = Modes.getModes().getCustomSequenceAir().split(" ");
 
-//        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
+//         (this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
 //        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
         Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
         Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
@@ -1558,7 +1558,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         String[] extractedJet1Time = Modes.getModes().getCascadeWaterfallJet1().split(" ");
         String[] extractedJet2Time = Modes.getModes().getCascadeWaterfallJet2().split(" ");
 
-//        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
+//         (this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
 //        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
         Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
         Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
@@ -1617,7 +1617,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         String[] extractedJet1Time = Modes.getModes().getCascadeWaterfallJet1().split(" ");
         String[] extractedJet2Time = Modes.getModes().getCascadeWaterfallJet2().split(" ");
 
-//        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
+//         (this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
 //        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
         Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
         Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));
@@ -1642,7 +1642,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         String[] extractedJet1Time = Modes.getModes().getNeckShoulderSequence().split(" ");
         String[] extractedJet2Time = Modes.getModes().getWaterShoulderSequence().split(" ");
 
-//        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
+//         (this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
 //        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
         Long jet1Sec= Long.valueOf((Integer.parseInt(extractedJet1Time[0])));
         Long jet2Sec= Long.valueOf((Integer.parseInt(extractedJet2Time[0])));

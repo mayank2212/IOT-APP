@@ -271,7 +271,7 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
                 img_loading.setVisibility(View.INVISIBLE);
                 btn_scan.setText(getString(R.string.start_scan));
                 progressDialog.dismiss();
-                Toast.makeText(BluetoothActivity.this, getString(R.string.connect_fail), Toast.LENGTH_LONG).show();
+                 Toast.makeText(BluetoothActivity.this, getString(R.string.connect_fail), Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -289,9 +289,9 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
                 mDeviceAdapter.notifyDataSetChanged();
 
                 if (isActiveDisConnected) {
-                    Toast.makeText(BluetoothActivity.this, getString(R.string.active_disconnected), Toast.LENGTH_LONG).show();
+                    Toast.makeText (BluetoothActivity.this, getString(R.string.active_disconnected), Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(BluetoothActivity.this, getString(R.string.disconnected), Toast.LENGTH_LONG).show();
+                   Toast.makeText (BluetoothActivity.this, getString(R.string.disconnected), Toast.LENGTH_LONG).show();
                     ObserverManager.getInstance().notifyObserver(bleDevice);
                 }
 
@@ -348,7 +348,7 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
     private void checkPermissions() {
         BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (!bluetoothAdapter.isEnabled()) {
-            Toast.makeText(this, getString(R.string.please_open_blue), Toast.LENGTH_LONG).show();
+            Toast.makeText (this, getString(R.string.please_open_blue), Toast.LENGTH_LONG).show();
             return;
         }
 

@@ -74,7 +74,7 @@ public class HomePageActivity extends AppCompatActivity {
                         goToCustom();
                         break;
                     case NONE:
-                        Toast.makeText(HomePageActivity.this,"Bar is not at far end.",Toast.LENGTH_SHORT).show();
+                        Toast.makeText (HomePageActivity.this,"Bar is not at far end.",Toast.LENGTH_SHORT).show();
                         break;
                 }
             }
@@ -130,7 +130,7 @@ public class HomePageActivity extends AppCompatActivity {
 //                    }
 //
 //                }else{
-//                    Toast.makeText(HomePageActivity.this, "Device is not connected", Toast.LENGTH_SHORT).show();
+//                     (HomePageActivity.this, "Device is not connected", Toast.LENGTH_SHORT).show();
 //                }
 //
 //            }
@@ -147,7 +147,7 @@ public class HomePageActivity extends AppCompatActivity {
 //                    finish();
 //
 //                }else{
-//                    Toast.makeText(HomePageActivity.this, "Device does not connected ", Toast.LENGTH_SHORT).show();
+//                     (HomePageActivity.this, "Device does not connected ", Toast.LENGTH_SHORT).show();
 //                }
 //            }
 //        });
@@ -166,12 +166,12 @@ public class HomePageActivity extends AppCompatActivity {
                 if (progress == 0 && !isSameValue0) {
                     //TODO :: ADD ACTIVITY INTENT WHEN POINTER IS AT LEFT MOST SIDE
                     stateobj = state.DEF;
-                    //Toast.makeText(HomePageActivity.this, "0", Toast.LENGTH_SHORT).show();
+                    // (HomePageActivity.this, "0", Toast.LENGTH_SHORT).show();
                     isSameValue0 = true;
                 } else if (progress == 260 && !isSameValue100) {
                     //TODO :: ADD ACTIVITY INTENT WHEN POINTER IS AT RIGHT MOST SIDE
                     stateobj = state.CUST;
-                    //Toast.makeText(HomePageActivity.this, "260", Toast.LENGTH_SHORT).show();
+                    // (HomePageActivity.this, "260", Toast.LENGTH_SHORT).show();
                     isSameValue100 = true;
                 }
                 if (progress > 10) {
@@ -197,12 +197,12 @@ public class HomePageActivity extends AppCompatActivity {
     void goToDefault(){
         if (BluetoothOperation.isDeviceConnected()){
             BluetoothOperation.sendCommand("#$DEFAULTSET$#");
-//            Toast.makeText(HomePageActivity.this, "Default contect ", Toast.LENGTH_SHORT).show();
+//             (HomePageActivity.this, "Default contect ", Toast.LENGTH_SHORT).show();
 
             tvOnOff.setText("OFF");
         }
         else{
-            Toast.makeText(HomePageActivity.this, "Device does not connected ", Toast.LENGTH_SHORT).show();
+            Toast.makeText (HomePageActivity.this, "Device does not connected ", Toast.LENGTH_SHORT).show();
             tvOnOff.setText("ON");
         }
     }
@@ -215,7 +215,7 @@ public class HomePageActivity extends AppCompatActivity {
             BluetoothOperation.sendCommand("#$CUSTOMSET$#");
         }
         else{
-            Toast.makeText(HomePageActivity.this, "Device does not connected ", Toast.LENGTH_SHORT).show();
+             Toast.makeText(HomePageActivity.this, "Device does not connected ", Toast.LENGTH_SHORT).show();
             tvOnOff.setText("ON");
 
         }
@@ -241,7 +241,7 @@ public class HomePageActivity extends AppCompatActivity {
     public boolean isBluetoothHeadsetConnected() {
         BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (mBluetoothAdapter != null && mBluetoothAdapter.isEnabled() && mBluetoothAdapter.getProfileConnectionState(BluetoothHeadset.HEADSET) == BluetoothHeadset.STATE_CONNECTED) {
-            Toast.makeText(HomePageActivity.this, "Device is  connected ", Toast.LENGTH_SHORT).show();
+             Toast.makeText(HomePageActivity.this, "Device is  connected ", Toast.LENGTH_SHORT).show();
 
 //            return mBluetoothAdapter != null && mBluetoothAdapter.isEnabled()
 //                    && mBluetoothAdapter.getProfileConnectionState(BluetoothHeadset.HEADSET) == BluetoothHeadset.STATE_CONNECTED;
@@ -251,7 +251,7 @@ public class HomePageActivity extends AppCompatActivity {
 
 
         } else {
-            Toast.makeText(HomePageActivity.this, "Device is not connected ", Toast.LENGTH_SHORT).show();
+            Toast.makeText (HomePageActivity.this, "Device is not connected ", Toast.LENGTH_SHORT).show();
         }
         return true;
     }

@@ -57,7 +57,7 @@ public class CustomDrainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_custom_drain);
         getSupportActionBar().hide();
         isOn = getIntent().getBooleanExtra("isAlreadyOn", false);
-//        Toast.makeText(this, "from custom isOn : " + isOn, Toast.LENGTH_SHORT).show();
+//         (this, "from custom isOn : " + isOn, Toast.LENGTH_SHORT).show();
 
         resultIntent.putExtra("isOn", isOn);
         setResult(18, resultIntent);

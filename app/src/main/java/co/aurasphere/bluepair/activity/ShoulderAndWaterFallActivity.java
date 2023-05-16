@@ -27,7 +27,7 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
             seekBarShoulder.setProgress(Integer.parseInt(extractedFillMinute[0]));
             mins1=Integer.parseInt(extractedFillMinute[0]);
             tvShoulderTimer.setText(extractedFillMinute[0]);
-            //Toast.makeText(this, "", //Toast.LENGTH_SHORT).show();
+            // (this, "", //Toast.LENGTH_SHORT).show();
             currentCleanFillSec = Long.parseLong(extractedFillMinute[0]);
             currentCleanDrainSec = Long.parseLong(extractedDrainMinute[0]);
             if(currentCleanFillSec==0 && currentCleanDrainSec==0){
@@ -37,7 +37,7 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
                 tvStart.setText("START");
                 resultIntent.putExtra("isOn", isOn);
             }
-//                //Toast.makeText(this, "the progress of hydro is " + seekBarShoulder.getProgress(), //Toast.LENGTH_SHORT).show();
+//                // (this, "the progress of hydro is " + seekBarShoulder.getProgress(), //Toast.LENGTH_SHORT).show();
 
 
 
@@ -128,7 +128,7 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
 
         isAlreadyOn = getIntent().getBooleanExtra("isAlreadyOn", false);
         key = getIntent().getStringExtra("key1");
-        //Toast.makeText(this, "key is  "+key, //Toast.LENGTH_SHORT).show();
+        // (this, "key is  "+key, //Toast.LENGTH_SHORT).show();
         initialiseViews();
         if (isAlreadyOn) {
             tvStart.setText("STOP");
@@ -294,7 +294,7 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
                     tvStart.setText("STOP");
                     resultIntent.putExtra("isOn", isOn);
                     setResult(3, resultIntent);
-                    //Toast.makeText(ShoulderAndWaterFallActivity.this, "key equal fill : " + ((key).equals("FILL")), //Toast.LENGTH_SHORT).show();
+                    // (ShoulderAndWaterFallActivity.this, "key equal fill : " + ((key).equals("FILL")), //Toast.LENGTH_SHORT).show();
                     if(key.equals("FILL")) {
                         setResult(19, resultIntent);
                         broadcastIntent.putExtra("isOn",isOn);
@@ -366,7 +366,7 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
 
     private void setInitialData() {
         isAlreadyOn = getIntent().getBooleanExtra("isAlreadyOn", false);
-        //Toast.makeText(this, "is already on "+isAlreadyOn, //Toast.LENGTH_SHORT).show();
+        // (this, "is already on "+isAlreadyOn, //Toast.LENGTH_SHORT).show();
         if (isAlreadyOn) {
             tvStart.setText("STOP");
             isOn = true;
@@ -384,9 +384,9 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
                 seekBarShoulder.setProgress(Integer.parseInt(extractedMinute[0]));
                 mins1=Integer.parseInt(extractedMinute[0]);
                 tvShoulderTimer.setText(extractedMinute[0]);
-                //Toast.makeText(this, "", //Toast.LENGTH_SHORT).show();
+                // (this, "", //Toast.LENGTH_SHORT).show();
                 currentCleanFillSec = Long.parseLong(extractedMinute[0]);
-//                //Toast.makeText(this, "the progress of hydro is " + seekBarShoulder.getProgress(), //Toast.LENGTH_SHORT).show();
+//                // (this, "the progress of hydro is " + seekBarShoulder.getProgress(), //Toast.LENGTH_SHORT).show();
 
                 extractedMinute = Modes.getModes().getCleanDrainTime().split(" ");
                 seekBarWater.setProgress(Integer.parseInt(extractedMinute[0]));
@@ -400,9 +400,9 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
                 seekBarShoulder.setProgress(Integer.parseInt(extractedMinute[0]));
                 mins1=Integer.parseInt(extractedMinute[0]);
                 tvShoulderTimer.setText(extractedMinute[0]);
-                //Toast.makeText(this, "", //Toast.LENGTH_SHORT).show();
+                // (this, "", //Toast.LENGTH_SHORT).show();
                 currentCleanFillSec = Long.parseLong(extractedMinute[0]);
-//                //Toast.makeText(this, "the progress of hydro is " + seekBarShoulder.getProgress(), //Toast.LENGTH_SHORT).show();
+//                // (this, "the progress of hydro is " + seekBarShoulder.getProgress(), //Toast.LENGTH_SHORT).show();
 
                 extractedMinute = Modes.getModes().getWaterShoulderSequence().split(" ");
                 seekBarWater.setProgress(Integer.parseInt(extractedMinute[0]));

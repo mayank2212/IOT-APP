@@ -100,40 +100,40 @@ public class CascadeSetOrderActivity extends AppCompatActivity {
         massage1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
                 mins1 = i;
                 massage1txt.setText(i+"");
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
 
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
 
             }
         });
         massage2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
                 mins2 = i;
                 massage2txt.setText(i+"");
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
 
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
 
             }
         });
@@ -174,7 +174,7 @@ public class CascadeSetOrderActivity extends AppCompatActivity {
                     isOn = false;
                     start.setText("START");
                     BluetoothOperation.sendCommand("#$CASCADESEQOFF$#");
-//                    Toast.makeText(CascadeSetOrderActivity.this, "off command : "+"#$CASCADESEQOFF$#", Toast.LENGTH_SHORT).show();
+//                     (CascadeSetOrderActivity.this, "off command : "+"#$CASCADESEQOFF$#", Toast.LENGTH_SHORT).show();
                     resultIntent.putExtra("isOn",isOn);
                     setResult(2,resultIntent);
                     broadcastIntent.putExtra("isOn",isOn);
@@ -185,7 +185,7 @@ public class CascadeSetOrderActivity extends AppCompatActivity {
                     isOn = true;
                     start.setText("STOP");
                     BluetoothOperation.sendCommand("#$CASCADESEQH1"+String.format("%03d", mins1)+"H2"+String.format("%03d", mins2)+"$#");
-//                    Toast.makeText(CascadeSetOrderActivity.this, "on command : "+"#$CASCA DESEQH1"+String.format("%03d", mins1)+"H2"+String.format("%03d", mins2)+"$#", Toast.LENGTH_SHORT).show();
+//                     (CascadeSetOrderActivity.this, "on command : "+"#$CASCA DESEQH1"+String.format("%03d", mins1)+"H2"+String.format("%03d", mins2)+"$#", Toast.LENGTH_SHORT).show();
                     resultIntent.putExtra("isOn",isOn);
                     setResult(2,resultIntent);
                     Modes.getModes().setCascadeWaterfallJet1(String.valueOf(mins1));

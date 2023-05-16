@@ -266,7 +266,7 @@ public class HydroMessage extends AppCompatActivity {
         massage4.setProgress(mins4);
         initialiseViews();
 
-//        Toast.makeText(this, ""+isAlreadyOn, Toast.LENGTH_SHORT).show();
+//         (this, ""+isAlreadyOn, Toast.LENGTH_SHORT).show();
 
         if(isAlreadyOn){
             start.setText("STOP");
@@ -281,80 +281,80 @@ public class HydroMessage extends AppCompatActivity {
         massage1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
                 mins1 = i;
                 massage1txt.setText(i+"");
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
 
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
 
             }
         });
         massage2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
                 mins2 = i;
                 massage2txt.setText(i+"");
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
 
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
 
             }
         });
         massage3.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
                 mins3 = i;
                 massage3txt.setText(i+"");
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
 
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
 
             }
         });
         massage4.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
                 mins4 = i;
                 massage4txt.setText(i+"");
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
 
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
 
             }
         });

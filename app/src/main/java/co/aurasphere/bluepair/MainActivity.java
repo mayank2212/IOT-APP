@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements ListInteractionLi
         Log.d(TAG, "Item clicked : " + BluetoothController.deviceToString(device));
         if (bluetooth.isAlreadyPaired(device)) {
             Log.d(TAG, "Device already paired!");
-            Toast.makeText(this, R.string.device_already_paired, Toast.LENGTH_SHORT).show();
+//             (this, R.string.device_already_paired, Toast.LENGTH_SHORT).show();
         } else {
             Log.d(TAG, "Device not paired. Pairing.");
             boolean outcome = bluetooth.pair(device);
@@ -175,7 +175,7 @@ public class MainActivity extends AppCompatActivity implements ListInteractionLi
                 bondingProgressDialog = ProgressDialog.show(this, "", "Pairing with device " + deviceName + "...", true, false);
             } else {
                 Log.d(TAG, "Error while pairing with device " + deviceName + "!");
-                Toast.makeText(this, "Error while pairing with device " + deviceName + "!", Toast.LENGTH_SHORT).show();
+//                 (this, "Error while pairing with device " + deviceName + "!", Toast.LENGTH_SHORT).show();
             }
         }
         return null;

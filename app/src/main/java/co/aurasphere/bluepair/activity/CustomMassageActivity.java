@@ -184,7 +184,7 @@ public class CustomMassageActivity extends AppCompatActivity {
 
             setDefaultResults();
             setInitialProgress(key);
-//            Toast.makeText(this, "the key is " + key, Toast.LENGTH_SHORT).show();
+//             (this, "the key is " + key, Toast.LENGTH_SHORT).show();
 
 //        isAlreadyOn=getIntent().getBooleanExtra("isOn",false);
 //        if(isAlreadyOn){
@@ -197,7 +197,7 @@ public class CustomMassageActivity extends AppCompatActivity {
 //        resultIntent.putExtra("isOn",isOn);
 //        setResult(3,resultIntent);
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(), "the exception is custom Massage"+e, Toast.LENGTH_LONG).show();
+//             (getApplicationContext(), "the exception is custom Massage"+e, Toast.LENGTH_LONG).show();
         }
 
     }
@@ -310,7 +310,7 @@ public class CustomMassageActivity extends AppCompatActivity {
            seekBarSelectTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                @Override
               public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar progress"+i,Toast.LENGTH_LONG).show();
                    mins = i;
                    Log.d("TAG", "onProgressChanged: custom massage activity "+i);
                     tvTimer.setText(String.valueOf(i)+"\nMin");
@@ -319,13 +319,13 @@ public class CustomMassageActivity extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar start",Toast.LENGTH_LONG).show();
 
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-//                Toast.makeText(CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
+//                 (CustomMassageActivity.this ,"Seek Bar stop",Toast.LENGTH_LONG).show();
 
             }
         });
@@ -358,7 +358,7 @@ public class CustomMassageActivity extends AppCompatActivity {
                    //Intent intent=new Intent(CustomMassageActivity.this,CustomActivity.class);
                    //startActivity(intent);
                    setTitleForModes(currentMillis+" Min");
-//                   Toast.makeText(CustomMassageActivity.this, "Time set is : "+(currentMillis/60000), Toast.LENGTH_SHORT).show();
+//                    (CustomMassageActivity.this, "Time set is : "+(currentMillis/60000), Toast.LENGTH_SHORT).show();
                    resultIntent.putExtra("isOn",isOn);
                    setResult(3,resultIntent);
                    String time = String.format("%03d", mins);
@@ -537,8 +537,8 @@ public class CustomMassageActivity extends AppCompatActivity {
 
     private void setInitialProgress(Operations key){
         String timing=getIntent().getStringExtra("previous_time");
-//        Toast.makeText(this, "initial time "+timing, Toast.LENGTH_SHORT).show();
-//        Toast.makeText(this, "previous time is "+timing, Toast.LENGTH_SHORT).show();
+//         (this, "initial time "+timing, Toast.LENGTH_SHORT).show();
+//         (this, "previous time is "+timing, Toast.LENGTH_SHORT).show();
         String[] extractedMinute;
         switch (key){
 
@@ -546,7 +546,7 @@ public class CustomMassageActivity extends AppCompatActivity {
                extractedMinute=Modes.getModes().getHydroTime().split(" ");
 //               if(isOn)
                seekBarSelectTime.setProgress(Integer.parseInt(extractedMinute[0])/60000);
-//                Toast.makeText(this, "the progress of hydro is "+seekBarSelectTime.getProgress(), Toast.LENGTH_SHORT).show();
+//                 (this, "the progress of hydro is "+seekBarSelectTime.getProgress(), Toast.LENGTH_SHORT).show();
                 currentMillis= Long.parseLong(extractedMinute[0]);
                 tvTimer.setText(Integer.parseInt(extractedMinute[0])/60000+" Min");
                 tvTimer.setText(timing+" Min");
@@ -660,7 +660,7 @@ public class CustomMassageActivity extends AppCompatActivity {
         switch (key){
 
             case HYDRO:
-            Toast.makeText(this, "broadcasts are unregister", Toast.LENGTH_SHORT).show();
+//             (this, "broadcasts are unregister", Toast.LENGTH_SHORT).show();
                 unregisterReceiver(hydroBroadCast);
                 break;
             case AIR:

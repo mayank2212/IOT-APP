@@ -84,8 +84,8 @@ public class BluetoothController implements Closeable {
         // bluetooth has not started yet.
         Log.d(TAG, "Bluetooth starting discovery.");
         if (!bluetooth.startDiscovery()) {
-            Toast.makeText(context, "Error while starting device discovery!", Toast.LENGTH_SHORT)
-                    .show();
+//             (context, "Error while starting device discovery!", Toast.LENGTH_SHORT)
+//                    .show();
             Log.d(TAG, "StartDiscovery returned false. Maybe Bluetooth isn't on?");
 
             // Ends the discovery.
@@ -166,7 +166,7 @@ public class BluetoothController implements Closeable {
                 case BluetoothAdapter.STATE_OFF:
                     // Bluetooth is OFF.
                     Log.d(TAG, "Error while turning Bluetooth on.");
-                    Toast.makeText(context, "Error while turning Bluetooth on.", Toast.LENGTH_SHORT);
+//                     (context, "Error while turning Bluetooth on.", Toast.LENGTH_SHORT);
                     // Resets the flag since this discovery has been performed.
                     bluetoothDiscoveryScheduled = false;
                     break;
