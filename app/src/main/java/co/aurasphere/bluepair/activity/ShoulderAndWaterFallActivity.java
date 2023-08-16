@@ -280,6 +280,8 @@ public class ShoulderAndWaterFallActivity extends AppCompatActivity {
                     if(key.equals("FILL")) {
                         setResult(19, resultIntent);
                         broadcastIntent.putExtra("isOn",isOn);
+                        String startCommand = "#$CLEANFL"+String.format("%2d",mins1)+"DR"+String.format("%2d",mins2)+"$#";
+                        BluetoothOperation.sendCommand(startCommand);
                         sendBroadcast(broadcastIntent);
                     }else if(key.equals("SHOULDER")){
                         setResult(3,resultIntent);

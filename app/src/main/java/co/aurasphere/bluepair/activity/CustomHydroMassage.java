@@ -209,7 +209,8 @@ public class CustomHydroMassage extends AppCompatActivity {
 
                 }
                 else {
-                    BluetoothOperation.sendCommand("#$TOGHYDRO"+String.format("%03d", mins1)+"AIR"+String.format("%03d", mins2)+"ON$#");
+//                    BluetoothOperation.sendCommand("#$TOGHYDRO"+String.format("%03d", mins1)+"AIR"+String.format("%03d", mins2)+"ON$#");
+                    BluetoothOperation.sendCommand("#$TOGHYD"+String.format("%02d", mins1)+"AIR"+String.format("%02d", mins2)+"$#");
                     isOn = true;
                     start.setText("STOP");
                     resultIntent.putExtra("isOn",isOn);

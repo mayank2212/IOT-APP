@@ -12,6 +12,69 @@ public class Modes {
         return obj;
     }
 
+    public int getIsHydroOn() {
+        return isHydroOn;
+    }
+
+    public void setIsHydroOn(int isHydroOn) {
+        this.isHydroOn = isHydroOn;
+    }
+
+    public int getIsAirMassageOn() {
+        return isAirMassageOn;
+    }
+
+    public void setIsAirMassageOn(int isAirMassageOn) {
+        this.isAirMassageOn = isAirMassageOn;
+    }
+
+    public int getIsHeaterOn() {
+        return isHeaterOn;
+    }
+
+    public void setIsHeaterOn(int isHeaterOn) {
+        this.isHeaterOn = isHeaterOn;
+    }
+
+    public int getIsOzoneOn() {
+        return isOzoneOn;
+    }
+
+    public void setIsOzoneOn(int isOzoneOn) {
+        this.isOzoneOn = isOzoneOn;
+    }
+
+    public int getIsChromaOn() {
+        return isChromaOn;
+    }
+
+    public void setIsChromaOn(int isChromaOn) {
+        this.isChromaOn = isChromaOn;
+    }
+
+    public int getIsCascadeOn() {
+        return isCascadeOn;
+    }
+
+    public void setIsCascadeOn(int isCascadeOn) {
+        this.isCascadeOn = isCascadeOn;
+    }
+
+    public String getHeaterTemp() {
+        return heaterTemp;
+    }
+
+    public void setHeaterTemp(String heaterTemp) {
+        this.heaterTemp = heaterTemp;
+    }
+
+    private int isHydroOn;
+    private int isAirMassageOn;
+    private int isHeaterOn;
+    private int isOzoneOn;
+    private int isChromaOn;
+    private int isCascadeOn;
+    private String heaterTemp;
     private String HydroTime = "600000 Min";
     private String AirTime = "600000 Min";
     private String WaterTime = "600000 Min";

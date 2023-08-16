@@ -55,6 +55,7 @@ public class CascadeSetOrderActivity extends AppCompatActivity {
                 if(jet1Sec==0 && jet2Sec==0 ){
                     BluetoothOperation.sendCommand("#$CASCADESEQOFF$#");
                     start.setText("START");
+                    Modes.getModes().setIsCascadeOn(0);
                     isOn=false;
                     isAlreadyOn=false;
                     Intent broadcastIntent=new Intent(CustomActivity.CASCADE_WATERFALL_SEQUENCE_START_STOP);
@@ -174,6 +175,7 @@ public class CascadeSetOrderActivity extends AppCompatActivity {
                     isOn = false;
                     start.setText("START");
                     BluetoothOperation.sendCommand("#$CASCADESEQOFF$#");
+                    Modes.getModes().setIsCascadeOn(0)  ;
 //                    Toast.makeText(CascadeSetOrderActivity.this, "off command : "+"#$CASCADESEQOFF$#", Toast.LENGTH_SHORT).show();
                     resultIntent.putExtra("isOn",isOn);
                     setResult(2,resultIntent);
@@ -184,7 +186,9 @@ public class CascadeSetOrderActivity extends AppCompatActivity {
                 else {
                     isOn = true;
                     start.setText("STOP");
-                    BluetoothOperation.sendCommand("#$CASCADESEQH1"+String.format("%03d", mins1)+"H2"+String.format("%03d", mins2)+"$#");
+//                    BluetoothOperation.sendCommand("#$CASCADESEQH1"+String.format("%03d", mins1)+"H2"+String.format("%03d", mins2)+"$#");
+                    BluetoothOperation.sendCommand("#$CASEQ1"+String.format("%02d", mins1)+"2"+String.format("%02d", mins2)+"$#");
+                    Modes.getModes().setIsCascadeOn(1);
 //                    Toast.makeText(CascadeSetOrderActivity.this, "on command : "+"#$CASCA DESEQH1"+String.format("%03d", mins1)+"H2"+String.format("%03d", mins2)+"$#", Toast.LENGTH_SHORT).show();
                     resultIntent.putExtra("isOn",isOn);
                     setResult(2,resultIntent);

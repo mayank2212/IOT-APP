@@ -37,6 +37,7 @@ public class CustomMassageActivity extends AppCompatActivity {
                     BluetoothOperation.sendCommand("#$AIROFF$#");
                     tvStart.setText("START");
                     isOn = false;
+                    Modes.getModes().setIsAirMassageOn((isOn)?1:0);
                     resultIntent.putExtra("isOn",isOn);
                     resultIntent.putExtra("isTimeChanged",true);
                 }
@@ -100,6 +101,7 @@ public class CustomMassageActivity extends AppCompatActivity {
                 if(currentMillis==0){
                     tvTimer.setText("0 Min");
                     BluetoothOperation.sendCommand("#$OZONEOFF$#");
+                    Modes.getModes().setIsOzoneOn(0);
                     tvStart.setText("START");
                     isOn = false;
                     resultIntent.putExtra("isOn",isOn);
@@ -125,6 +127,7 @@ public class CustomMassageActivity extends AppCompatActivity {
                     BluetoothOperation.sendCommand("#$HYDROOFF$#");
                     tvStart.setText("START");
                     isOn = false;
+                    Modes.getModes().setIsHydroOn((isOn)?1:0);
                     resultIntent.putExtra("isOn", isOn);
                 }
 //                Log.e("TAG", "onReceive: hydro broadcast currentmillis : " + currentMillis);
@@ -201,6 +204,7 @@ public class CustomMassageActivity extends AppCompatActivity {
                     resultIntent.putExtra("isOn",isOn);
                     setResult(12,resultIntent);
                 }
+                Modes.getModes().setIsAirMassageOn((isOn)?1:0);
                 break;
             case WATER:
                 if (isOn){
@@ -226,9 +230,11 @@ public class CustomMassageActivity extends AppCompatActivity {
                 if (isOn){
                     resultIntent.putExtra("isOn",isOn);
                     setResult(16,resultIntent);
+                    Modes.getModes().setIsOzoneOn(1);
                 }else{
                     resultIntent.putExtra("isOn",isOn);
                     setResult(16,resultIntent);
+                    Modes.getModes().setIsOzoneOn(0);
                 }
                 break;
             default:
@@ -348,6 +354,7 @@ public class CustomMassageActivity extends AppCompatActivity {
                                sendBroadcast(broadcastIntent);
 
                                resultIntent.putExtra("isTimeChanged",false);
+                               Modes.getModes().setIsHydroOn((isOn)?1:0);
                                setResult(11,resultIntent);
                            }else{
                                BluetoothOperation.sendCommand("#$HYDROON"+time+"$#");
@@ -358,8 +365,9 @@ public class CustomMassageActivity extends AppCompatActivity {
                                broadcastIntent.putExtra("key",key.toString());
                                sendBroadcast(broadcastIntent);
 
-                               resultIntent.putExtra("isTimeChange/d",true);
+                               resultIntent.putExtra("isTimeChanged",true);
                                resultIntent.putExtra("isOn",isOn);
+                               Modes.getModes().setIsHydroOn((isOn)?1:0);
                                setResult(11,resultIntent);
                            }
 
@@ -375,6 +383,7 @@ public class CustomMassageActivity extends AppCompatActivity {
 
                                resultIntent.putExtra("isOn",isOn);
                                resultIntent.putExtra("isTimeChanged",true);
+                               Modes.getModes().setIsAirMassageOn((isOn)?1:0);
                                setResult(12,resultIntent);
                            }else{
                                BluetoothOperation.sendCommand("#$AIRON"+time+"$#");
@@ -387,6 +396,7 @@ public class CustomMassageActivity extends AppCompatActivity {
 
                                resultIntent.putExtra("isOn",isOn);
                                resultIntent.putExtra("isTimeChanged",false);
+                               Modes.getModes().setIsAirMassageOn((isOn)?1:0);
                                setResult(12,resultIntent);
                            }
                            break;
@@ -456,6 +466,7 @@ public class CustomMassageActivity extends AppCompatActivity {
 
                                resultIntent.putExtra("isOn",isOn);
                                resultIntent.putExtra("isTimeChanged",true);
+                               Modes.getModes().setIsOzoneOn((isOn)?1:0);
                                setResult(16,resultIntent);
                            }else{
                                BluetoothOperation.sendCommand("#$OZONEON"+time+"$#");
@@ -465,8 +476,8 @@ public class CustomMassageActivity extends AppCompatActivity {
                                broadcastIntent.putExtra("isOn",isOn);
                                broadcastIntent.putExtra("key",key.toString());
                                sendBroadcast(broadcastIntent);
-
                                resultIntent.putExtra("isOn",isOn);
+                               Modes.getModes().setIsOzoneOn((isOn)?1:0);
                                setResult(16,resultIntent);
                            }
                            break;

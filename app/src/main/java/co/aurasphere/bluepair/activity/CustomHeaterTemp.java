@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import co.aurasphere.bluepair.Modes;
 import co.aurasphere.bluepair.R;
 import co.aurasphere.bluepair.operation.BluetoothOperation;
 
@@ -65,7 +66,7 @@ public class CustomHeaterTemp extends AppCompatActivity {
                 String time = String.format("%03d", mins);
                 Log.d("TAG", "custom heater  : "+String.format("%03d", mins));
 
-
+                Modes.getModes().setHeaterTemp(String.format("%03d", mins));
                     BluetoothOperation.sendCommand("#$HEATERTEMP"+time+"$#");
 
 

@@ -478,12 +478,13 @@ public class HydroMessage extends AppCompatActivity {
 
     private String getCommand() {
 
-        Log.d("TAG", "Hydro jet1 time: is "+String.format("%03d", mins1));
-        Log.d("TAG", "Hydro jet2 time: is "+String.format("%03d", mins2));
-        Log.d("TAG", "Hydro jet3 time: is "+String.format("%03d", mins3));
-        Log.d("TAG", "Hydro jet4 time: is "+String.format("%03d", mins4));
+        Log.d("TAG", "Hydro jet1 time: is "+String.format("%02d", mins1));
+        Log.d("TAG", "Hydro jet2 time: is "+String.format("%02d", mins2));
+        Log.d("TAG", "Hydro jet3 time: is "+String.format("%02d", mins3));
+        Log.d("TAG", "Hydro jet4 time: is "+String.format("%02d", mins4));
 
-        return "#$HYDROSEQH1"+String.format("%03d", mins1)+"H2"+String.format("%03d", mins2)+"H3"+String.format("%03d", mins3)+"H4"+String.format("%03d", mins4)+"$#";
+//        return "#$HYDROSEQH1"+String.format("%03d", mins1)+"H2"+String.format("%03d", mins2)+"H3"+String.format("%03d", mins3)+"H4"+String.format("%03d", mins4)+"$#";
+        return "#$SEQ1"+String.format("%2d", mins1)+"2"+String.format("%02d", mins2)+"3"+String.format("%02d", mins3)+"4"+String.format("%02d", mins4)+"$#";
     }
 
 

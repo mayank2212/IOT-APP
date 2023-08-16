@@ -18,9 +18,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
+import androidx.work.WorkRequest;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
+import co.aurasphere.bluepair.AcknowledgementWorker;
 import co.aurasphere.bluepair.Modes;
 import co.aurasphere.bluepair.R;
 import co.aurasphere.bluepair.operation.BluetoothOperation;
@@ -165,7 +171,9 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         public void onReceive(Context context, Intent intent) {
 
             if(intent.getAction()==HEATER_CUSTOM_MASSAGE_START_STOP) {
-                handleHeater(intent.getBooleanExtra("isOn", false));
+                boolean isHeaterOn = intent.getBooleanExtra("isOn", false);
+                handleHeater(isHeaterOn);
+                Modes.getModes().setIsHeaterOn((isHeaterOn)?1:0);
             }
         }
     };
@@ -184,7 +192,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         @Override
         public void onReceive(Context context, Intent intent) {
             if(intent.getAction()==CLEANING_CUSTOM_MASSAGE_START_STOP) {
-                handleCleaning(intent.getBooleanExtra("isOn", false));
+                handleCleaning(intent.getBooleanExtra("isOn", false),false);
             }
         }
     };
@@ -228,6 +236,10 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        WorkRequest workRequest = new PeriodicWorkRequest.Builder(AcknowledgementWorker.class, 10, TimeUnit.SECONDS)
+                .build();
+        WorkManager.getInstance(this.getApplicationContext()).enqueue(workRequest);
         isOnOff.add(false);
         isOnOff.add(false);
         isOnOff.add(false);
@@ -379,10 +391,12 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                 if (b){
                     tvOzoneOnOff.setText("ON");
                     BluetoothOperation.sendCommand("#$OZONEON"+String.format("%03d",Integer.parseInt(timer))+"$#");
+                    Modes.getModes().setIsOzoneOn(1);
                     Log.d("TAG", "custom ozone: "+String.format("%03d",Integer.parseInt(timer)));
                 }else{
                     tvOzoneOnOff.setText("OFF");
                     BluetoothOperation.sendCommand("#$OZONEOFF");
+                    Modes.getModes().setIsOzoneOn(0);
 
                 }
                 handleOzone(b);
@@ -427,13 +441,17 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b){
-                    BluetoothOperation.sendCommand("#$AIRON010$#");
+                    String[] extractedMinute = Modes.getModes().getAirTime().split(" ");
+//        Long airMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
+                    Long airMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])));
+                    BluetoothOperation.sendCommand("#$AIRON+"+String.format("%03d",airMillis)+"+$#");
                     tvAirMassageONOFF.setText("ON");
                 }else{
 
                     BluetoothOperation.sendCommand("#$AIROFF$#");
                     tvAirMassageONOFF.setText("OFF");
                 }
+                Modes.getModes().setIsAirMassageOn((b)?1:0);
                 handleAir(b);
             }
         });
@@ -474,18 +492,21 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                         tvChromaLightONOFF.setText("PAUSE");
                         light = CHROMESTATE.PAUSE;
                         handleChroma(true,"ON");
+                        Modes.getModes().setIsChromaOn(1);
                         break;
                     case PAUSE:
                         BluetoothOperation.sendCommand("#$CHROMAPAUSE$#");
                         tvChromaLightONOFF.setText("OFF");
                         light = CHROMESTATE.ON;
                         handleChroma(false,"PAUSE");
+                        Modes.getModes().setIsChromaOn(0);
                         break;
                     case ON:
                         BluetoothOperation.sendCommand("#$CHROMAOFF$#");
                         tvChromaLightONOFF.setText("ON");
                         light = CHROMESTATE.OFF;
                         handleChroma(false,"OFF");
+                        Modes.getModes().setIsChromaOn(2);
                         break;
                 }
             }
@@ -554,11 +575,11 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                     tvCustomCleaningONOFF.setText("ON");
 //                    BluetoothOperation.sendCommand("");
 //                    startActivity(new Intent(CustomActivity.this,));
-                    handleCleaning(b);
+                    handleCleaning(b,true);
 
                 }else {
                     tvCustomCleaningONOFF.setText("OFF");
-                    handleCleaning(b);
+                    handleCleaning(b,true);
                     //BluetoothOperation.sendCommand("#$CLEANINGOFF$#");
                 }
             }
@@ -830,7 +851,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                 handleDrain(data.getBooleanExtra("isOn",false));
                 break;
             case 19:
-                handleCleaning(data.getBooleanExtra("isOn",false));
+                handleCleaning(data.getBooleanExtra("isOn",false), false);
                 break;
 
 //            case 19:
@@ -871,7 +892,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         super.onRestart();
 //        updateTimes();
     }
-    private void handleCleaning(boolean isStarted) {
+    private void handleCleaning(boolean isStarted, boolean shouldSendOnCmd) {
 //        Toast.makeText(this, "in clean custom", Toast.LENGTH_SHORT).show();
         String[] extractedFillMinute = Modes.getModes().getCleanFillTime().split(" ");
         String[] extractedDrainMinute = Modes.getModes().getCleanDrainTime().split(" ");
@@ -881,6 +902,10 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         Long drainSeconds= Long.valueOf((Integer.parseInt(extractedDrainMinute[0])));
 
         if(isStarted){
+            if(shouldSendOnCmd) {
+                String startCommand = "#$CLEANFL"+String.format("%02d",fallSeconds)+"DR"+String.format("%02d",drainSeconds)+"$#";
+                BluetoothOperation.sendCommand(startCommand);
+            }
             countDownTimers.get(8).cancel();
             countDownTimers.get(9).cancel();
 //            Toast.makeText(this, "in hydro if", Toast.LENGTH_SHORT).show();
@@ -964,6 +989,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
 //        Toast.makeText(this, "timing is : "+Modes.getModes().getHydroTime(), Toast.LENGTH_SHORT).show();
 //        Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
         Long hydroMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])));
+        Modes.getModes().setIsHydroOn((isStarted)?1:0);
 
         if(isStarted){
             countDownTimers.get(0).cancel();
@@ -991,6 +1017,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                     hydroBroadCastIntent.putExtra(BROADCAST_MASSAGE_TYPE,Operations.HYDRO.toString());
                     sendBroadcast(hydroBroadCastIntent);
                     BluetoothOperation.sendCommand("#$HYDROOFF$#");
+                    Modes.getModes().setIsHydroOn(0);
 
                 }
             };
@@ -1007,6 +1034,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
     private void handleAir(boolean isStarted) {
+        Modes.getModes().setIsAirMassageOn((isStarted)?1:0);
         String[] extractedMinute = Modes.getModes().getAirTime().split(" ");
 //        Long airMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])+1)*60*1000);
         Long airMillis= Long.valueOf((Integer.parseInt(extractedMinute[0])));
@@ -1036,6 +1064,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                     airBroadcastIntent.putExtra(BROADCAST_MASSAGE_TYPE,Operations.AIR.toString());
                     sendBroadcast(airBroadcastIntent);
                     BluetoothOperation.sendCommand("#$AIROFF$#");
+                    Modes.getModes().setIsAirMassageOn(0);
                 }
             };
             countDownTimers.set(1,airTimer);
@@ -1494,6 +1523,9 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
 
 
 
+
+
+
         customHydroSequence=new CountDownTimer(jet1Sec*1000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -1635,6 +1667,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
 
             isOnOff.set(2, false );
             waterFallSequenceOnOff.setText("OFF");
+            Modes.getModes().setIsCascadeOn(0);
         }
     }
 

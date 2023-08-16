@@ -32,6 +32,7 @@ public class CustomHeaterActivity extends AppCompatActivity {
                 if(currentMillis==0){
                     Toast.makeText(context, "heater is completed activity", Toast.LENGTH_SHORT).show();
                     tvCustomHeaterTimer.setText("0 Min");
+                    Modes.getModes().setIsHeaterOn(0);
                     BluetoothOperation.sendCommand("#$HEATEROFF$#");
                     custom_massage_start.setText("START");
                     isOn = false;
@@ -130,6 +131,7 @@ public class CustomHeaterActivity extends AppCompatActivity {
                     sendBroadcast(broadcastIntent);
 //                    Toast.makeText(CustomHeaterActivity.this, "in off : " + isOn, Toast.LENGTH_SHORT).show();
                     resultIntent.putExtra("isOn", isOn);
+                    Modes.getModes().setIsHeaterOn(1);
                     setResult(17, resultIntent);
                 } else {
                     BluetoothOperation.sendCommand("#$HEATERON" + time + "$#");
@@ -141,6 +143,7 @@ public class CustomHeaterActivity extends AppCompatActivity {
                     resultIntent.putExtra("isOn", isOn);
                     Modes.getModes().setHeaterTime(currentMillis + " Min");
                     resultIntent.putExtra("isOn", isOn);
+                    Modes.getModes().setIsHeaterOn(1);
                     setResult(17, resultIntent);
                 }
 //                onBackPressed();
